@@ -34,12 +34,26 @@
   transform: scale(1.1);
 }
 
-/* ===== Styles basiques pour page moderne ===== */
+/* ===== Styles généraux ===== */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   line-height: 1.6;
   color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  background-color: #0a2a43;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 header {
@@ -69,6 +83,7 @@ header p {
   font-weight: bold;
 }
 
+/* Sections */
 section {
   padding: 60px 20px;
 }
@@ -79,7 +94,7 @@ h2 {
   font-size: 2rem;
 }
 
-/* Services */
+/* Services : cartes arrondies */
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -90,14 +105,16 @@ h2 {
 .service-card {
   background-color: #f8f8f8;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 20px;
   width: 250px;
   text-align: center;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .service-card i {
@@ -243,15 +260,15 @@ h2 {
     <a href="mailto:tonemail@example.com" class="cta-button">Réservez votre séance</a>
 </section>
 
-<!-- ===== Footer avec 4 logos petits et centrés ===== -->
+<!-- Footer avec 4 logos petits et centrés -->
 <footer class="footer-logos">
   <div class="logo-container">
     <img src="images/cabinet-certifie-ahtma-formation.webp" alt="Certification AHTMA" class="logo-footer">
     <img src="images/ACCUEIL.jpg" alt="Accueil" class="logo-footer">
-    <a href="https://www.facebook.com/" target="_blank">
+    <a href="https://www.facebook.com/VincentMalardHypnose?locale=fr_FR" target="_blank" rel="noopener">
       <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="logo-footer">
     </a>
-    <a href="https://www.instagram.com/" target="_blank">
+    <a href="#" target="_blank" rel="noopener">
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="logo-footer">
     </a>
   </div>
@@ -263,13 +280,4 @@ const faqQuestions = document.querySelectorAll('.faq-question');
 faqQuestions.forEach(q => {
     q.addEventListener('click', () => {
         const answer = q.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-        const icon = q.querySelector('i');
-        icon.classList.toggle('fa-chevron-up');
-        icon.classList.toggle('fa-chevron-down');
-    });
-});
-</script>
-
-</body>
-</html>
+        answer.style.display = answer.style.display === 'block' ? '

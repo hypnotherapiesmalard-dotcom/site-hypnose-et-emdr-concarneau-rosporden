@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hypnose & Thérapies</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #f9f9f9;
+}
+header {
+    background-color: #6C63FF;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.encart {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.testimonial {
+    background: #e0e0ff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+.faq-item {
+    margin-bottom: 20px;
+}
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+}
+.faq-answer {
+    display: none;
+    padding-left: 10px;
+}
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #6C63FF;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Hypnose & Thérapies</h1>
+    <p>Accompagnement bien-être et développement personnel</p>
+</header>
+
+<section id="presentation">
+    <h2>Présentation</h2>
+    <div class="encart">
+        <p>Je m'appelle [Ton Nom], thérapeute certifié en hypnose et développement personnel. Je vous accompagne dans vos projets de transformation et mieux-être.</p>
+    </div>
+</section>
+
+<section id="parcours">
+    <h2>Mon Parcours</h2>
+    <div class="encart">
+        <p>[Décris ton parcours professionnel et formations]</p>
+    </div>
+</section>
+
+<section id="temoignages">
+    <h2>Témoignages</h2>
+    <div class="testimonial">
+        <p>« Cette thérapie m’a aidé à mieux gérer mon stress » - Client 1</p>
+    </div>
+    <div class="testimonial">
+        <p>« Merci pour votre accompagnement ! » - Client 2</p>
+    </div>
+</section>
+
+<section id="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+        <div class="faq-question">Comment se déroule une séance ?</div>
+        <div class="faq-answer">Les séances durent environ 1h et se déroulent [description].</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">Puis-je avoir un suivi personnalisé ?</div>
+        <div class="faq-answer">Oui, nous proposons des suivis adaptés à chaque personne.</div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <a href="mailto:tonemail@example.com" class="cta-button">Me contacter</a>
+</section>
+
+<script>
+const faqQuestions = document.querySelectorAll('.faq-question');
+faqQuestions.forEach(q => {
+    q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+});
+</script>
+
+</body>
+</html>
 

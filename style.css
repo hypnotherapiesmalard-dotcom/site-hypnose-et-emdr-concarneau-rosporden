@@ -1,1 +1,23 @@
+.footer-logos {
+  background-color: #0a2a43; /* bleu foncé */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* espace entre les logos */
+}
+
+.logo-footer {
+  height: 50px; /* taille des logos */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-footer:hover {
+  transform: scale(1.1); /* effet zoom au survol */
+}
 

@@ -21,3 +21,43 @@
   transform: scale(1.1); /* effet zoom au survol */
 }
 
+/* === Footer logos (bandeau bas) === */
+.footer-logos{
+  background-color: #062a47; /* bleu foncé */
+  padding: 10px 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 -3px 12px rgba(0,0,0,0.15);
+}
+
+.footer-logos .logo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  padding: 0 12px;
+}
+
+/* très petit format pour logos (discret) */
+.footer-logos .logo-footer{
+  height: 32px;      /* <-- taille réduite */
+  width: auto;
+  display: inline-block;
+  opacity: 0.95;
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+/* léger effet au survol */
+.footer-logos .logo-footer:hover{
+  transform: translateY(-4px) scale(1.08);
+  opacity: 1;
+}
+
+/* évite que le footer fixe recouvre le contenu */
+body {
+  padding-bottom: 72px; /* ajuste si tu veux plus/pas */ 
+}

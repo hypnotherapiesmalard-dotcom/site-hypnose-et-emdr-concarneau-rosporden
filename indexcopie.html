@@ -125,10 +125,10 @@ h2 {
 
 /* Parcours */
 #parcours img {
-  width: 200px;
-  aspect-ratio: 1 / 1;   /* carré auto */
-  border-radius: 50%;    /* cercle parfait */
-  object-fit: cover;     /* recadrage propre */
+  width: 200px;          
+  aspect-ratio: 1 / 1;   
+  border-radius: 50%;    
+  object-fit: cover;     
   display: block;
   margin: 0 auto 20px;
 }
@@ -139,20 +139,38 @@ h2 {
   text-align: center;
 }
 
-/* Témoignages */
-.testimonials {
+/* Témoignages défilants */
+.testimonial-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: #f0f4f8;
+  padding: 30px 0;
+}
+
+.slider-track {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  gap: 40px;
+  animation: scroll-left 40s linear infinite;
+  width: max-content;
 }
 
 .testimonial {
-  background-color: #f0f4f8;
-  padding: 20px;
+  min-width: 300px;
+  max-width: 400px;
+  background: white;
   border-radius: 12px;
-  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex-shrink: 0;
   text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* FAQ */
@@ -196,7 +214,7 @@ h2 {
     <h1>Hypnose & Thérapies</h1>
     <p>Votre bien-être commence ici</p>
     <a href="mailto:hypno.therapies.malard@gmail.com?subject=Demande%20de%20séance&body=Bonjour%20Vincent,%20je%20souhaite%20prendre%20rendez-vous..." 
-       class="cta-button">Réservez une séance</a>
+   class="cta-button">Réservez une séance</a>
 </header>
 
 <section id="services">
@@ -234,18 +252,19 @@ h2 {
 </section>
 
 <section id="temoignages">
-    <h2>Témoignages</h2>
-    <div class="testimonials">
-        <div class="testimonial">
-            <p>« Vincent m'a été d'une grande aide pour vaincre une angoisse. Il a été à l'écoute, bienveillant, empathique. J'ai réussi grâce à ses pratiques comme l'EMDR à gagner certaines batailles ! Je recommande vivement pour un moment de sérénité et un réel changement dans sa vie ! Merci encore Vincent et peut-être à très vite ! »</p>
-        </div>
-        <div class="testimonial">
-            <p>« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. Il a très rapidement cerné le problème et par l'EMDR puis l'hypnose a fait taire l'anxiété l'attente. À voir comment cela évolue dans les prochains mois, mais j'ai repris confiance et je suis serein. Un thérapeute rare : bienveillant, disponible, efficace et profondément humain. MERCI VINCENT. »</p>
-        </div>
-        <div class="testimonial">
-            <p>« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. Très bon accueil et échange merci pour votre aide. Je recommande »</p>
-        </div>
+  <h2>Témoignages</h2>
+  <div class="testimonial-slider">
+    <div class="slider-track">
+      <div class="testimonial">« Vincent m'a été d'une grande aide pour vaincre une angoisse. Il a été à l'écoute, bienveillant, empathique. J'ai réussi grâce à ses pratiques comme l'EMDR à gagner certaines batailles ! »</div>
+      <div class="testimonial">« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. Il a très rapidement cerné le problème et par l'EMDR puis l'hypnose a fait taire l'anxiété. »</div>
+      <div class="testimonial">« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. Très bon accueil et échange merci pour votre aide. Je recommande. »</div>
+      
+      <!-- duplication pour effet fluide -->
+      <div class="testimonial">« Vincent m'a été d'une grande aide pour vaincre une angoisse. Il a été à l'écoute, bienveillant, empathique. J'ai réussi grâce à ses pratiques comme l'EMDR à gagner certaines batailles ! »</div>
+      <div class="testimonial">« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. Il a très rapidement cerné le problème et par l'EMDR puis l'hypnose a fait taire l'anxiété. »</div>
+      <div class="testimonial">« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. Très bon accueil et échange merci pour votre aide. Je recommande. »</div>
     </div>
+  </div>
 </section>
 
 <section id="faq">
@@ -258,24 +277,24 @@ h2 {
         <div class="faq-question">Puis-je avoir un suivi personnalisé ? <i class="fas fa-chevron-down"></i></div>
         <div class="faq-answer">Oui, des suivis réguliers sont proposés selon vos objectifs et besoins spécifiques.</div>
     </div>
-    <div class="faq-item">
+  <div class="faq-item">
         <div class="faq-question">Combien coûte une séance ? Et combien de séances sont nécessaires ?<i class="fas fa-chevron-down"></i></div>
         <div class="faq-answer">Une séance d'hypnose ou d'Emdr coûte 55 Euros et peut être remboursée par la mutuelle. Les thérapies brèves vous font aller mieux en quelques séances, espacées de 2 à 3 semaines.</div>
     </div>
     <div class="faq-item">
         <div class="faq-question">Tout le monde est il réceptif à l'hypnose ?<i class="fas fa-chevron-down"></i></div>
         <div class="faq-answer">L’hypnose est un état naturel, que vous expérimentez déjà chaque jour sans le savoir, par exemple lorsque vous êtes plongé dans un film ou absorbé dans vos pensées. J'amplifie cet état pour ensuite travailler avec votre inconscient sur vos objectifs.</div>
-    </div>
 </section>
 
-<section id="contact">
+<a href="mailto:hypno.therapies.malard@gmail.com?subject=Demande%20de%20séance&body=Bonjour%20Vincent,%20je%20souhaite%20prendre%20rendez-vous..." 
+   class="cta-button">Réservez une séance</a>
+
     <h2>Contactez-moi</h2>
-    <div>
+  <div>
         <p>Par téléphone au 0749772290</p>
         <p>Par mail : hypno.therapies.malard@gmail.com</p>
     </div>
-    <a href="mailto:hypno.therapies.malard@gmail.com?subject=Demande%20de%20séance&body=Bonjour%20Vincent,%20je%20souhaite%20prendre%20rendez-vous..." 
-       class="cta-button">Réservez une séance</a>
+    <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez votre séance</a>
 </section>
 
 <footer class="footer-logos">

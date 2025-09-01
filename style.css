@@ -166,3 +166,8 @@ h2 {
 .footer-logos .logo-footer:hover{
   transform: scale(1.1);
 }
+.decorative-banner img {
+  width: 100%;
+  height: auto; /* garde les proportions */
+  display: block;
+}

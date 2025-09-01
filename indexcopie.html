@@ -7,34 +7,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
-/* ===== Bandeau supérieur ===== */
+/* ===== Bandeau supérieur tout à droite ===== */
 .topbar {
   background-color: #0a2a43;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* tout aligné à droite */
   align-items: center;
   padding: 8px 20px;
   font-size: 0.95rem;
 }
 
-.topbar-left {
-  font-weight: bold;
-}
-
-.topbar-left a {
+.topbar a {
   color: white;
   text-decoration: none;
-}
-
-.topbar-right {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.topbar-right span {
-  font-size: 0.9rem;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 /* ===== Footer avec logos centrés ===== */
@@ -226,14 +214,10 @@ h2 {
 </head>
 <body>
 
-<!-- Bandeau supérieur -->
+<!-- Bandeau supérieur aligné à droite -->
 <div class="topbar">
-  <div class="topbar-left">
-    📞 <a href="tel:0749772290">07 49 77 22 90</a>
-  </div>
-  <div class="topbar-right">
-    ⭐⭐⭐⭐⭐ <span>Avis Google</span>
-  </div>
+  📞 <a href="tel:0749772290">07 49 77 22 90</a> | 
+  ⭐⭐⭐⭐⭐ <a href="https://www.google.com/search?q=Vincent+Malard+Hypnose&ludocid=TON_LUDOCID" target="_blank" rel="noopener">Avis Google</a>
 </div>
 
 <nav>
@@ -337,8 +321,8 @@ h2 {
 
   <h2>Contactez-moi</h2>
   <div>
-    <p>Par téléphone au 0749772290</p>
-    <p>Par mail : hypno.therapies.malard@gmail.com</p>
+        <p>Par téléphone au 0749772290</p>
+        <p>Par mail : hypno.therapies.malard@gmail.com</p>
   </div>
   <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez votre séance</a>
 </section>

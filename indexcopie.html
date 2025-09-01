@@ -6,7 +6,6 @@
 <title>Hypnose & Thérapies</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<!-- Lien vers le CSS externe -->
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +16,7 @@
   ⭐⭐⭐⭐⭐ <a href="https://www.google.com/search?q=Vincent+Malard+Hypnose&ludocid=TON_LUDOCID" target="_blank" rel="noopener">Avis Google</a>
 </div>
 
-<!-- Image décorative -->
+<!-- Bandeau décoratif -->
 <div class="decorative-banner">
   <img src="4ccbf54f-8828-41f7-a703-964fcf080c8e.png" alt="Bandeau décoratif">
 </div>
@@ -41,7 +40,7 @@
   </div>
 </header>
 
-<!-- Sections principales -->
+<!-- Services -->
 <section id="services">
   <h2>Mes Services</h2>
   <div class="services">
@@ -68,6 +67,7 @@
   </div>
 </section>
 
+<!-- Parcours -->
 <section id="parcours">
   <h2>Mon Parcours</h2>
   <img src="httpslh3.googleusercontent.compAF1QipMlsskJ_oddrTPGuRjE6kA9yZmy1NYtPJdmu4YD=w141-h141-n-k-no-nu.jpg" alt="Photo de moi">
@@ -76,23 +76,37 @@
   </div>
 </section>
 
+<!-- Témoignages -->
 <section id="temoignages">
   <h2>Témoignages</h2>
   <div class="testimonials-container">
     <div class="testimonials">
+      <!-- Blocs originaux -->
       <div class="testimonial">
-        <p>« Vincent m'a été d'une grande aide pour vaincre une angoisse… »</p>
+        <p>« Vincent m'a été d'une grande aide pour vaincre une angoisse. Il a été à l'écoute, bienveillant, empathique. J'ai réussi grâce à ses pratiques comme l'EMDR à gagner certaines batailles ! Je recommande vivement pour un moment de sérénité et un réel changement dans sa vie ! Merci encore Vincent et peut-être à très vite ! »</p>
       </div>
       <div class="testimonial">
-        <p>« J'ai rencontré Vincent après plusieurs années d'anxiété… »</p>
+        <p>« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. Il a très rapidement cerné le problème et par l'EMDR puis l'hypnose a fait taire l'anxiété l'attente. À voir comment cela évolue dans les prochains mois, mais j'ai repris confiance et je suis serein. Un thérapeute rare : bienveillant, disponible, efficace et profondément humain. MERCI VINCENT. »</p>
       </div>
       <div class="testimonial">
-        <p>« Séance pour arrêt du tabac. Très bon résultat… »</p>
+        <p>« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. Très bon accueil et échange merci pour votre aide. Je recommande »</p>
+      </div>
+
+      <!-- Duplicata pour boucle fluide -->
+      <div class="testimonial">
+        <p>« Vincent m'a été d'une grande aide pour vaincre une angoisse. Il a été à l'écoute, bienveillant, empathique. J'ai réussi grâce à ses pratiques comme l'EMDR à gagner certaines batailles ! Je recommande vivement pour un moment de sérénité et un réel changement dans sa vie ! Merci encore Vincent et peut-être à très vite ! »</p>
+      </div>
+      <div class="testimonial">
+        <p>« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. Il a très rapidement cerné le problème et par l'EMDR puis l'hypnose a fait taire l'anxiété l'attente. À voir comment cela évolue dans les prochains mois, mais j'ai repris confiance et je suis serein. Un thérapeute rare : bienveillant, disponible, efficace et profondément humain. MERCI VINCENT. »</p>
+      </div>
+      <div class="testimonial">
+        <p>« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. Très bon accueil et échange merci pour votre aide. Je recommande »</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FAQ -->
 <section id="faq">
   <h2>FAQ</h2>
   <div class="faq-item">
@@ -108,11 +122,12 @@
     <div class="faq-answer">Une séance d'hypnose ou d'Emdr coûte 55 Euros et peut être remboursée par la mutuelle. Les thérapies brèves vous font aller mieux en quelques séances, espacées de 2 à 3 semaines.</div>
   </div>
   <div class="faq-item">
-    <div class="faq-question">Tout le monde est il réceptif à l'hypnose ?<i class="fas fa-chevron-down"></i></div>
-    <div class="faq-answer">L’hypnose est un état naturel…</div>
+    <div class="faq-question">Tout le monde est-il réceptif à l'hypnose ?<i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">L’hypnose est un état naturel que vous expérimentez déjà chaque jour, par exemple lorsque vous êtes plongé dans un film ou absorbé dans vos pensées. J'amplifie cet état pour travailler avec votre inconscient sur vos objectifs.</div>
   </div>
 </section>
 
+<!-- Contact -->
 <section id="contact">
   <a href="mailto:hypno.therapies.malard@gmail.com?subject=Demande%20de%20séance" class="cta-button">Réservez une séance</a>
   <h2>Contactez-moi</h2>
@@ -122,6 +137,7 @@
   </div>
 </section>
 
+<!-- Footer -->
 <footer class="footer-logos">
   <div class="logo-container">
     <img src="cabinet-certifie-ahtma-formation.jpg" alt="Certification AHTMA" class="logo-footer">
@@ -135,14 +151,14 @@
   </div>
 </footer>
 
+<!-- Script FAQ -->
 <script>
-// FAQ déroulante
 const faqQuestions = document.querySelectorAll('.faq-question');
 faqQuestions.forEach(q => {
-    q.addEventListener('click', () => {
-        const answer = q.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-    });
+  q.addEventListener('click', () => {
+    const answer = q.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+  });
 });
 </script>
 

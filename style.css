@@ -171,3 +171,21 @@ h2 {
   height: auto; /* garde les proportions */
   display: block;
 }
+header {
+  position: relative;
+  text-align: center;
+  color: #0a2a43;
+}
+
+.header-img {
+  width: 100%;
+  height: auto; /* pour garder les proportions */
+  display: block;
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

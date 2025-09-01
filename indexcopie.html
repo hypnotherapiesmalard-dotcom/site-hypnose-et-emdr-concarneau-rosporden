@@ -125,11 +125,14 @@ h2 {
 
 /* Parcours */
 #parcours img {
-  max-width: 200px;
-  border-radius: 50%;
+  width: 200px;          /* largeur fixe */
+  aspect-ratio: 1 / 1;   /* carré automatique */
+  border-radius: 50%;    /* cercle parfait */
+  object-fit: cover;     /* recadrage propre */
   display: block;
   margin: 0 auto 20px;
 }
+
 
 #parcours div {
   max-width: 800px;

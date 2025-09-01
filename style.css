@@ -1,9 +1,9 @@
-/* Bandeau supérieur */
+/* ===== Bandeau supérieur ===== */
 .topbar {
-  background-color: #0a2a43;
+  background-color: #0a2a43;  /* bleu foncé */
   color: white;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end;  /* texte à droite */
   align-items: center;
   padding: 8px 20px;
   font-size: 0.95rem;
@@ -12,17 +12,17 @@
 .topbar a {
   color: white;
   text-decoration: none;
-  margin-left: 15px;
+  margin-left: 15px; /* espace entre liens */
 }
 
-/* Bandeau décoratif */
+/* ===== Bandeau décoratif ===== */
 .decorative-banner img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* Navigation */
+/* ===== Navigation ===== */
 nav {
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@ nav a {
   font-weight: bold;
 }
 
-/* Header */
+/* ===== Header principal ===== */
 header {
   background: url('images/ACCUEIL.jpg') center/cover no-repeat;
   color: #0a2a43;
@@ -65,7 +65,7 @@ header p {
   font-weight: bold;
 }
 
-/* Sections */
+/* ===== Sections ===== */
 section {
   padding: 60px 20px;
 }
@@ -76,7 +76,7 @@ h2 {
   font-size: 2rem;
 }
 
-/* Services */
+/* ===== Services ===== */
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -105,7 +105,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Parcours */
+/* ===== Parcours ===== */
 #parcours img {
   width: 200px;          
   aspect-ratio: 1 / 1;   
@@ -121,33 +121,36 @@ h2 {
   text-align: center;
 }
 
-/* Footer */
-.footer-logos{
-  background-color: #062a47;
-  padding: 15px 0;
-  text-align: center;
+/* ===== Témoignages défilants ===== */
+.testimonials-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
-.footer-logos .logo-container{
+.testimonials {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
+  animation: scrollTestimonials 40s linear infinite;
+  will-change: transform;
 }
 
-.footer-logos .logo-footer{
-  height: 32px;
-  width: auto;
-  display: inline-block;
-  transition: transform 0.2s ease;
+.testimonial {
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  flex-shrink: 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.footer-logos .logo-footer:hover{
-  transform: scale(1.1);
+@keyframes scrollTestimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* FAQ */
+/* ===== FAQ ===== */
 .faq-item {
   max-width: 800px;
   margin: 0 auto 10px;
@@ -166,4 +169,39 @@ h2 {
 .faq-answer {
   display: none;
   padding: 0 15px 15px;
+}
+
+/* ===== Contact ===== */
+#contact {
+  text-align: center;  /* tout centré */
+}
+
+#contact p {
+  margin: 5px 0;
+}
+
+/* ===== Footer ===== */
+.footer-logos {
+  background-color: #062a47;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.footer-logos .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-logos .logo-footer {
+  height: 32px;
+  width: auto;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.footer-logos .logo-footer:hover {
+  transform: scale(1.1);
 }

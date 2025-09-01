@@ -1,11 +1,28 @@
-/* ===== Styles généraux ===== */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  line-height: 1.6;
-  color: #333;
+/* Bandeau supérieur */
+.topbar {
+  background-color: #0a2a43;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px 20px;
+  font-size: 0.95rem;
 }
 
+.topbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+/* Bandeau décoratif */
+.decorative-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -20,9 +37,10 @@ nav a {
   font-weight: bold;
 }
 
+/* Header */
 header {
   background: url('images/ACCUEIL.jpg') center/cover no-repeat;
-  color: white;
+  color: #0a2a43;
   text-align: center;
   padding: 100px 20px 60px;
 }
@@ -58,7 +76,7 @@ h2 {
   font-size: 2rem;
 }
 
-/* Services : cartes arrondies */
+/* Services */
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -89,14 +107,13 @@ h2 {
 
 /* Parcours */
 #parcours img {
-  width: 200px;          /* largeur fixe */
-  aspect-ratio: 1 / 1;   /* carré automatique */
-  border-radius: 50%;    /* cercle parfait */
-  object-fit: cover;     /* recadrage propre */
+  width: 200px;          
+  aspect-ratio: 1 / 1;   
+  border-radius: 50%;    
+  object-fit: cover;     
   display: block;
   margin: 0 auto 20px;
 }
-
 
 #parcours div {
   max-width: 800px;
@@ -104,44 +121,7 @@ h2 {
   text-align: center;
 }
 
-/* Témoignages */
-.testimonials {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.testimonial {
-  background-color: #f0f4f8;
-  padding: 20px;
-  border-radius: 12px;
-  width: 300px;
-  text-align: center;
-}
-
-/* FAQ */
-.faq-item {
-  max-width: 800px;
-  margin: 0 auto 10px;
-  border-bottom: 1px solid #ccc;
-}
-
-.faq-question {
-  cursor: pointer;
-  padding: 15px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-answer {
-  display: none;
-  padding: 0 15px 15px;
-}
-
-/* Footer avec 4 logos petits et centrés */
+/* Footer */
 .footer-logos{
   background-color: #062a47;
   padding: 15px 0;
@@ -166,26 +146,24 @@ h2 {
 .footer-logos .logo-footer:hover{
   transform: scale(1.1);
 }
-.decorative-banner img {
-  width: 100%;
-  height: auto; /* garde les proportions */
-  display: block;
-}
-header {
-  position: relative;
-  text-align: center;
-  color: #0a2a43;
+
+/* FAQ */
+.faq-item {
+  max-width: 800px;
+  margin: 0 auto 10px;
+  border-bottom: 1px solid #ccc;
 }
 
-.header-img {
-  width: 100%;
-  height: auto; /* pour garder les proportions */
-  display: block;
+.faq-question {
+  cursor: pointer;
+  padding: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.faq-answer {
+  display: none;
+  padding: 0 15px 15px;
 }

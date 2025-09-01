@@ -7,26 +7,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
-/* ===== Bandeau supérieur tout à droite ===== */
+/* ===== Bandeau supérieur ===== */
 .topbar {
   background-color: #0a2a43;
   color: white;
   display: flex;
-  justify-content: flex-end; /* tout aligné à droite */
+  justify-content: flex-end;
   align-items: center;
   padding: 8px 20px;
   font-size: 0.95rem;
 }
 
 .topbar a {
-  <!-- Bandeau décoratif -->
-<div class="decorative-banner">
-  <img src="4ccbf54f-8828-41f7-a703-964fcf080c8e.png" alt="Bandeau décoratif">
-</div>
-
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
 }
 
-/* ===== Footer avec logos centrés ===== */
+/* Bandeau décoratif */
+.decorative-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Footer avec logos centrés */
 .footer-logos{
   background-color: #062a47;
   padding: 15px 0;
@@ -52,7 +57,7 @@
   transform: scale(1.1);
 }
 
-/* ===== Styles généraux ===== */
+/* Styles généraux */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -221,6 +226,12 @@ h2 {
   ⭐⭐⭐⭐⭐ <a href="https://www.google.com/search?q=Vincent+Malard+Hypnose&ludocid=TON_LUDOCID" target="_blank" rel="noopener">Avis Google</a>
 </div>
 
+<!-- Image décorative -->
+<div class="decorative-banner">
+  <img src="4ccbf54f-8828-41f7-a703-964fcf080c8e.png" alt="Bandeau décoratif">
+</div>
+
+<!-- Navigation -->
 <nav>
     <a href="#services">Services</a>
     <a href="#parcours">Parcours</a>
@@ -229,6 +240,7 @@ h2 {
     <a href="#contact">Contact</a>
 </nav>
 
+<!-- Header principal -->
 <header>
     <img src="96d46116-9ad9-48c4-962b-377e22833e1c.jpg" alt="Hypnose & Thérapies" class="header-img">
     <div class="header-content">
@@ -238,7 +250,7 @@ h2 {
     </div>
 </header>
 
-
+<!-- Sections principales -->
 <section id="services">
     <h2>Mes Services</h2>
     <div class="services">
@@ -278,23 +290,13 @@ h2 {
     <div class="testimonials-container">
       <div class="testimonials">
         <div class="testimonial">
-            <p>« Vincent m'a été d'une grande aide pour vaincre une angoisse. Il a été à l'écoute, bienveillant, empathique. J'ai réussi grâce à ses pratiques comme l'EMDR à gagner certaines batailles ! Je recommande vivement pour un moment de sérénité et un réel changement dans sa vie ! Merci encore Vincent et peut-être à très vite ! »</p>
+            <p>« Vincent m'a été d'une grande aide pour vaincre une angoisse… »</p>
         </div>
         <div class="testimonial">
-            <p>« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. Il a très rapidement cerné le problème et par l'EMDR puis l'hypnose a fait taire l'anxiété l'attente. À voir comment cela évolue dans les prochains mois, mais j'ai repris confiance et je suis serein. Un thérapeute rare : bienveillant, disponible, efficace et profondément humain. MERCI VINCENT. »</p>
+            <p>« J'ai rencontré Vincent après plusieurs années d'anxiété… »</p>
         </div>
         <div class="testimonial">
-            <p>« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. Très bon accueil et échange merci pour votre aide. Je recommande »</p>
-        </div>
-        <!-- duplicata pour effet boucle fluide -->
-        <div class="testimonial">
-            <p>« Vincent m'a été d'une grande aide pour vaincre une angoisse. Il a été à l'écoute, bienveillant, empathique. J'ai réussi grâce à ses pratiques comme l'EMDR à gagner certaines batailles ! Je recommande vivement pour un moment de sérénité et un réel changement dans sa vie ! Merci encore Vincent et peut-être à très vite ! »</p>
-        </div>
-        <div class="testimonial">
-            <p>« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. Il a très rapidement cerné le problème et par l'EMDR puis l'hypnose a fait taire l'anxiété l'attente. À voir comment cela évolue dans les prochains mois, mais j'ai repris confiance et je suis serein. Un thérapeute rare : bienveillant, disponible, efficace et profondément humain. MERCI VINCENT. »</p>
-        </div>
-        <div class="testimonial">
-            <p>« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. Très bon accueil et échange merci pour votre aide. Je recommande »</p>
+            <p>« Séance pour arrêt du tabac. Très bon résultat… »</p>
         </div>
       </div>
     </div>
@@ -316,7 +318,8 @@ h2 {
     </div>
     <div class="faq-item">
         <div class="faq-question">Tout le monde est il réceptif à l'hypnose ?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">L’hypnose est un état naturel, que vous expérimentez déjà chaque jour sans le savoir, par exemple lorsque vous êtes plongé dans un film ou absorbé dans vos pensées. J'amplifie cet état pour ensuite travailler avec votre inconscient sur vos objectifs.</div>
+        <div class="faq-answer">L’hypnose est un état naturel…</div>
+    </div>
 </section>
 
 <section id="contact">

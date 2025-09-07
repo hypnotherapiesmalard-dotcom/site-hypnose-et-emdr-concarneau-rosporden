@@ -1,217 +1,233 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hypnose & Thérapies</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<style>
-/* ===== Bandeau supérieur tout à droite ===== */
-.topbar {
-  background-color: #0a2a43;
-  color: white;
-  display: flex;
-  justify-content: flex-end; /* tout aligné à droite */
-  align-items: center;
-  padding: 8px 20px;
-  font-size: 0.95rem;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hypnose & Thérapies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+  /* ===== Bandeau supérieur ===== */
+  .topbar {
+    background-color: #0a2a43;
+    color: white;
+    display: flex;
+    justify-content: flex-end; /* aligné à droite */
+    align-items: center;
+    padding: 8px 20px;
+    font-size: 0.95rem;
+    gap: 15px;
+  }
 
-.topbar a {
-  <!-- Bandeau décoratif -->
-<div class="decorative-banner">
-  <img src="4ccbf54f-8828-41f7-a703-964fcf080c8e.png" alt="Bandeau décoratif">
-</div>
+  .topbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 8px;
+  }
 
-}
+  /* ===== Bandeau décoratif ===== */
+  .decorative-banner {
+    width: 100%;
+    text-align: center;
+    background: white;
+  }
+  .decorative-banner img {
+    max-width: 100%;
+    height: auto;
+  }
 
-/* ===== Footer avec logos centrés ===== */
-.footer-logos{
-  background-color: #062a47;
-  padding: 15px 0;
-  text-align: center;
-}
+  /* ===== Footer avec logos centrés ===== */
+  .footer-logos{
+    background-color: #062a47;
+    padding: 15px 0;
+    text-align: center;
+  }
 
-.footer-logos .logo-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+  .footer-logos .logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 
-.footer-logos .logo-footer{
-  height: 32px;
-  width: auto;
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
+  .footer-logos .logo-footer{
+    height: 32px;
+    width: auto;
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
 
-.footer-logos .logo-footer:hover{
-  transform: scale(1.1);
-}
+  .footer-logos .logo-footer:hover{
+    transform: scale(1.1);
+  }
 
-/* ===== Styles généraux ===== */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  line-height: 1.6;
-  color: #333;
-}
+  /* ===== Styles généraux ===== */
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+  }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px 0;
-  background-color: #0a2a43;
-}
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    background-color: #0a2a43;
+  }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
-header {
-  background: url('images/ACCUEIL.jpg') center/cover no-repeat;
-  color: #0a2a43;
-  text-align: center;
-  padding: 100px 20px 60px;
-}
+  header {
+    background: url('images/ACCUEIL.jpg') center/cover no-repeat;
+    color: #0a2a43;
+    text-align: center;
+    padding: 100px 20px 60px;
+    position: relative;
+  }
 
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
+  header img.header-img {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
 
-header p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
 
-.cta-button {
-  display: inline-block;
-  padding: 12px 25px;
-  background-color: #0a2a43;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
+  header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
 
-/* Sections */
-section {
-  padding: 60px 20px;
-}
+  .cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0a2a43;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
 
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
+  /* Sections */
+  section {
+    padding: 60px 20px;
+  }
 
-/* Services : cartes arrondies */
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+  }
 
-.service-card {
-  background-color: #f8f8f8;
-  padding: 20px;
-  border-radius: 20px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  /* Services : cartes arrondies */
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
+  .service-card {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-.service-card i {
-  font-size: 2rem;
-  color: #0a2a43;
-  margin-bottom: 10px;
-}
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
 
-/* Parcours */
-#parcours img {
-  width: 200px;          
-  aspect-ratio: 1 / 1;   
-  border-radius: 50%;    
-  object-fit: cover;     
-  display: block;
-  margin: 0 auto 20px;
-}
+  .service-card i {
+    font-size: 2rem;
+    color: #0a2a43;
+    margin-bottom: 10px;
+  }
 
-#parcours div {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
+  /* Parcours */
+  #parcours img {
+    width: 200px;          
+    aspect-ratio: 1 / 1;   
+    border-radius: 50%;    
+    object-fit: cover;     
+    display: block;
+    margin: 0 auto 20px;
+  }
 
-/* Témoignages défilants */
-.testimonials-container {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
+  #parcours div {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-.testimonials {
-  display: flex;
-  gap: 20px;
-  animation: scrollTestimonials 40s linear infinite;
-  will-change: transform;
-}
+  /* Témoignages défilants */
+  .testimonials-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
 
-.testimonial {
-  background-color: #f0f4f8;
-  padding: 20px;
-  border-radius: 12px;
-  width: 300px;
-  flex-shrink: 0;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+  .testimonials {
+    display: flex;
+    gap: 20px;
+    animation: scrollTestimonials 40s linear infinite;
+    will-change: transform;
+  }
 
-@keyframes scrollTestimonials {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+  .testimonial {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    flex-shrink: 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
 
-/* FAQ */
-.faq-item {
-  max-width: 800px;
-  margin: 0 auto 10px;
-  border-bottom: 1px solid #ccc;
-}
+  @keyframes scrollTestimonials {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 
-.faq-question {
-  cursor: pointer;
-  padding: 15px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  /* FAQ */
+  .faq-item {
+    max-width: 800px;
+    margin: 0 auto 10px;
+    border-bottom: 1px solid #ccc;
+  }
 
-.faq-answer {
-  display: none;
-  padding: 0 15px 15px;
-}
+  .faq-question {
+    cursor: pointer;
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-/* Contact */
-#contact {
-  text-align: center;
-}
-</style>
+  .faq-answer {
+    display: none;
+    padding: 0 15px 15px;
+  }
+
+  /* Contact */
+  #contact {
+    text-align: center;
+  }
+  </style>
 </head>
 <body>
 
@@ -219,6 +235,11 @@ h2 {
 <div class="topbar">
   📞 <a href="tel:0749772290">07 49 77 22 90</a> 
   ⭐⭐⭐⭐⭐ <a href="https://www.google.com/search?q=Vincent+Malard+Hypnose&ludocid=TON_LUDOCID" target="_blank" rel="noopener">Avis Google</a>
+</div>
+
+<!-- Bandeau décoratif -->
+<div class="decorative-banner">
+  <img src="4ccbf54f-8828-41f7-a703-964fcf080c8e.png" alt="Bandeau décoratif">
 </div>
 
 <nav>
@@ -237,7 +258,6 @@ h2 {
         <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez une séance</a>
     </div>
 </header>
-
 
 <section id="services">
     <h2>Mes Services</h2>

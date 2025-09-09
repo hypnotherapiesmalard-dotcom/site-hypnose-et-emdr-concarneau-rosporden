@@ -163,7 +163,7 @@ h2 {
   text-align: center;
 }
 
-/* Témoignages défilants */
+/* ===== Témoignages défilants (cartes horizontales) ===== */
 .testimonials-container {
   overflow: hidden;
   width: 100%;
@@ -172,10 +172,12 @@ h2 {
 .testimonials {
   display: flex;
   gap: 20px;
+  white-space: nowrap;
 }
 
 .testimonial {
   min-width: 300px;
+  max-width: 300px;
   background-color: #f0f4f8;
   padding: 20px;
   border-radius: 12px;
@@ -276,9 +278,9 @@ h2 {
   <h2>Témoignages</h2>
   <div class="testimonials-container">
     <div class="testimonials" id="testimonial-track">
-      <div class="testimonial">« Vincent m'a été d'une grande aide pour vaincre une angoisse. Il a été à l'écoute, bienveillant, empathique. J'ai réussi grâce à l'EMDR à gagner certaines batailles ! »</div>
-      <div class="testimonial">« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. Il a très rapidement cerné le problème. »</div>
-      <div class="testimonial">« Au top, je me sens libérée de tous les poids qui pouvaient m'empêcher d'avancer. Merci Vincent pour votre accompagnement. »</div>
+      <div class="testimonial">« Vincent m'a été d'une grande aide pour vaincre une angoisse. »</div>
+      <div class="testimonial">« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. »</div>
+      <div class="testimonial">« Au top, je me sens libérée de tous les poids qui pouvaient m'empêcher d'avancer. »</div>
       <div class="testimonial">« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. »</div>
       <div class="testimonial">« Juste génial, suite à un accident de la route, je me sens plus confiante et moins angoissée. »</div>
       <div class="testimonial">« Vincent m'a aidé à stopper l'envie de fumer. En seulement 2 séances, la nicotine a fui mon cerveau. »</div>
@@ -303,7 +305,7 @@ h2 {
     </div>
     <div class="faq-item">
         <div class="faq-question">Tout le monde est-il réceptif à l'hypnose ?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">L’hypnose est un état naturel, que vous expérimentez déjà chaque jour sans le savoir. J'amplifie cet état pour travailler avec votre inconscient sur vos objectifs.</div>
+        <div class="faq-answer">L’hypnose est un état naturel, que vous expérimentez déjà chaque jour. J'amplifie cet état pour travailler avec votre inconscient sur vos objectifs.</div>
     </div>
 </section>
 
@@ -340,7 +342,7 @@ faqQuestions.forEach(q => {
     });
 });
 
-// Scroll infini des témoignages
+// Scroll horizontal infini des cartes témoignages
 const track = document.getElementById('testimonial-track');
 track.innerHTML += track.innerHTML; // duplique les cartes pour boucle infinie
 let position = 0;

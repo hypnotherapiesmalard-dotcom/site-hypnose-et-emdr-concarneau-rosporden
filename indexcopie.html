@@ -17,12 +17,7 @@
   padding: 8px 20px;
   font-size: 0.95rem;
 }
-
-.topbar a { 
-  color: white; 
-  margin-left: 10px; 
-  text-decoration: none; 
-}
+.topbar a { color: white; margin-left: 10px; text-decoration: none; }
 
 /* ===== Footer avec logos centrés ===== */
 .footer-logos{
@@ -30,7 +25,6 @@
   padding: 15px 0;
   text-align: center;
 }
-
 .footer-logos .logo-container{
   display: flex;
   justify-content: center;
@@ -38,17 +32,13 @@
   gap: 20px;
   flex-wrap: wrap;
 }
-
 .footer-logos .logo-footer{
   height: 32px;
   width: auto;
   display: inline-block;
   transition: transform 0.2s ease;
 }
-
-.footer-logos .logo-footer:hover{
-  transform: scale(1.1);
-}
+.footer-logos .logo-footer:hover{ transform: scale(1.1); }
 
 /* ===== Styles généraux ===== */
 body {
@@ -57,7 +47,6 @@ body {
   line-height: 1.6;
   color: #333;
 }
-
 nav {
   display: flex;
   justify-content: center;
@@ -65,19 +54,7 @@ nav {
   padding: 15px 0;
   background-color: #0a2a43;
 }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* ===== Bannière ===== */
-.decorative-banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+nav a { color: white; text-decoration: none; font-weight: bold; }
 
 /* ===== Header ===== */
 header {
@@ -86,17 +63,8 @@ header {
   text-align: center;
   padding: 100px 20px 60px;
 }
-
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
+header h1 { font-size: 3rem; margin-bottom: 10px; }
+header p { font-size: 1.2rem; margin-bottom: 20px; }
 .cta-button {
   display: inline-block;
   padding: 12px 25px;
@@ -108,24 +76,16 @@ header p {
 }
 
 /* Sections */
-section {
-  padding: 60px 20px;
-}
+section { padding: 60px 20px; }
+h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
-
-/* Services : cartes arrondies */
+/* Services */
 .services {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
-
 .service-card {
   background-color: #f8f8f8;
   padding: 20px;
@@ -135,46 +95,26 @@ h2 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.service-card i {
-  font-size: 2rem;
-  color: #0a2a43;
-  margin-bottom: 10px;
-}
+.service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+.service-card i { font-size: 2rem; color: #0a2a43; margin-bottom: 10px; }
 
 /* Parcours */
 #parcours img {
-  width: 200px;          
-  aspect-ratio: 1 / 1;   
-  border-radius: 50%;    
-  object-fit: cover;     
-  display: block;
-  margin: 0 auto 20px;
+  width: 200px; aspect-ratio: 1 / 1; border-radius: 50%;
+  object-fit: cover; display: block; margin: 0 auto 20px;
 }
+#parcours div { max-width: 800px; margin: 0 auto; text-align: center; }
 
-#parcours div {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* ===== Témoignages défilants (cartes horizontales) ===== */
+/* ===== Témoignages - carrousel fluide ===== */
 .testimonials-container {
   overflow: hidden;
   width: 100%;
+  position: relative;
 }
-
-.testimonials {
+.testimonials-track {
   display: flex;
   gap: 20px;
-  white-space: nowrap;
 }
-
 .testimonial {
   min-width: 300px;
   max-width: 300px;
@@ -192,7 +132,6 @@ h2 {
   margin: 0 auto 10px;
   border-bottom: 1px solid #ccc;
 }
-
 .faq-question {
   cursor: pointer;
   padding: 15px;
@@ -201,24 +140,17 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
-
-.faq-answer {
-  display: none;
-  padding: 0 15px 15px;
-}
+.faq-answer { display: none; padding: 0 15px 15px; }
 
 /* Contact */
-#contact {
-  text-align: center;
-}
+#contact { text-align: center; }
 </style>
 </head>
 <body>
 
-<!-- Bandeau supérieur aligné à droite -->
 <div class="topbar">
   📞 <a href="tel:0749772290">07 49 77 22 90</a> 
-  ⭐⭐⭐⭐⭐ <a href="https://www.google.com/search?q=Vincent+Malard+Hypnose&ludocid=TON_LUDOCID" target="_blank" rel="noopener">Avis Google</a>
+  ⭐⭐⭐⭐⭐ <a href="#" target="_blank" rel="noopener">Avis Google</a>
 </div>
 
 <nav>
@@ -229,8 +161,6 @@ h2 {
     <a href="#contact">Contact</a>
 </nav>
 
-<div class="decorative-banner"></div>
-
 <header>
     <div class="header-content">
         <h1>Hypnose & Thérapies</h1>
@@ -240,124 +170,69 @@ h2 {
 </header>
 
 <section id="services">
-    <h2>Mes Services</h2>
-    <div class="services">
-        <div class="service-card">
-            <i class="fas fa-brain"></i>
-            <h3>Hypnose Thérapeutique</h3>
-            <p>Gestion du stress, anxiété, phobies, blocages émotionnels, addictions, troubles du sommeil, gestion du poids.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-user-check"></i>
-            <h3>Développement Personnel</h3>
-            <p>Techniques pour renforcer confiance, motivation et bien-être.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-hand-holding-heart"></i>
-            <h3>Accompagnement Personnalisé</h3>
-            <p>Séances sur-mesure adaptées à vos besoins et objectifs.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-heart-pulse"></i>
-            <h3>EMDR-DSA</h3>
-            <p>Séances spécialisées pour traiter traumatismes et stress post-traumatique.</p>
-        </div>
-    </div>
+<h2>Mes Services</h2>
+<div class="services">
+<div class="service-card"><i class="fas fa-brain"></i><h3>Hypnose Thérapeutique</h3><p>Gestion du stress, anxiété, phobies, blocages émotionnels, addictions, troubles du sommeil, gestion du poids.</p></div>
+<div class="service-card"><i class="fas fa-user-check"></i><h3>Développement Personnel</h3><p>Techniques pour renforcer confiance, motivation et bien-être.</p></div>
+<div class="service-card"><i class="fas fa-hand-holding-heart"></i><h3>Accompagnement Personnalisé</h3><p>Séances sur-mesure adaptées à vos besoins et objectifs.</p></div>
+<div class="service-card"><i class="fas fa-heart-pulse"></i><h3>EMDR-DSA</h3><p>Séances spécialisées pour traiter traumatismes et stress post-traumatique.</p></div>
+</div>
 </section>
 
 <section id="parcours">
-    <h2>Mon Parcours</h2>
-    <img src="httpslh3.googleusercontent.compAF1QipMlsskJ_oddrTPGuRjE6kA9yZmy1NYtPJdmu4YD=w141-h141-n-k-no-nu.jpg" alt="Photo de moi">
-    <div>
-        <p>Je suis thérapeute certifié en hypnose éricksonienne et en EMDR-DSA. Elève de l'AHTMA à Vannes en 2019, j'ai suivi les différentes formations avec passion pour, depuis 2021 et jusqu'à aujourd'hui, être pleinement investi dans l’accompagnement de mes patients vers un mieux-être durable et personnalisé.</p>
-    </div>
+<h2>Mon Parcours</h2>
+<img src="images/photo.jpg" alt="Photo de moi">
+<div><p>Je suis thérapeute certifié en hypnose éricksonienne et en EMDR-DSA...</p></div>
 </section>
 
-<!-- ===== Témoignages ===== -->
 <section id="temoignages">
-  <h2>Témoignages</h2>
-  <div class="testimonials-container">
-    <div class="testimonials" id="testimonial-track">
-      <div class="testimonial">« Vincent m'a été d'une grande aide pour vaincre une angoisse. »</div>
-      <div class="testimonial">« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. »</div>
-      <div class="testimonial">« Au top, je me sens libérée de tous les poids qui pouvaient m'empêcher d'avancer. »</div>
-      <div class="testimonial">« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. »</div>
-      <div class="testimonial">« Juste génial, suite à un accident de la route, je me sens plus confiante et moins angoissée. »</div>
-      <div class="testimonial">« Vincent m'a aidé à stopper l'envie de fumer. En seulement 2 séances, la nicotine a fui mon cerveau. »</div>
-      <div class="testimonial">« Découverte de l'hypnothérapie avec Vincent. Ses séances ont permis de faire disparaitre rapidement un état de stress et d'angoisse. »</div>
-    </div>
+<h2>Témoignages</h2>
+<div class="testimonials-container">
+  <div class="testimonials-track" id="testimonial-track">
+    <div class="testimonial">« Vincent m'a été d'une grande aide pour vaincre une angoisse. »</div>
+    <div class="testimonial">« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. »</div>
+    <div class="testimonial">« Au top, je me sens libérée de tous les poids qui pouvaient m'empêcher d'avancer. »</div>
+    <div class="testimonial">« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. »</div>
+    <div class="testimonial">« Juste génial, suite à un accident de la route, je me sens plus confiante et moins angoissée. »</div>
+    <div class="testimonial">« Vincent m'a aidé à stopper l'envie de fumer. En seulement 2 séances, la nicotine a fui mon cerveau. »</div>
+    <div class="testimonial">« Découverte de l'hypnothérapie avec Vincent. Ses séances ont permis de faire disparaitre rapidement un état de stress et d'angoisse. »</div>
   </div>
+</div>
 </section>
 
 <section id="faq">
-    <h2>FAQ</h2>
-    <div class="faq-item">
-        <div class="faq-question">Comment se déroule une séance ? <i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">Chaque séance dure environ 1h et se déroule en toute confidentialité, adaptée à vos besoins.</div>
-    </div>
-    <div class="faq-item">
-        <div class="faq-question">Puis-je avoir un suivi personnalisé ? <i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">Oui, des suivis réguliers sont proposés selon vos objectifs et besoins spécifiques.</div>
-    </div>
-    <div class="faq-item">
-        <div class="faq-question">Combien coûte une séance ? Et combien de séances sont nécessaires ?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">Une séance d'hypnose ou d'EMDR coûte 55 Euros et peut être remboursée par la mutuelle. Les thérapies brèves vous font aller mieux en quelques séances, espacées de 2 à 3 semaines.</div>
-    </div>
-    <div class="faq-item">
-        <div class="faq-question">Tout le monde est-il réceptif à l'hypnose ?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">L’hypnose est un état naturel, que vous expérimentez déjà chaque jour. J'amplifie cet état pour travailler avec votre inconscient sur vos objectifs.</div>
-    </div>
+<h2>FAQ</h2>
+<div class="faq-item"><div class="faq-question">Comment se déroule une séance ? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Chaque séance dure environ 1h et se déroule en toute confidentialité, adaptée à vos besoins.</div></div>
+<div class="faq-item"><div class="faq-question">Puis-je avoir un suivi personnalisé ? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Oui, des suivis réguliers sont proposés selon vos objectifs et besoins spécifiques.</div></div>
+<div class="faq-item"><div class="faq-question">Combien coûte une séance ? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Une séance d'hypnose ou d'EMDR coûte 55 Euros et peut être remboursée par la mutuelle.</div></div>
+<div class="faq-item"><div class="faq-question">Tout le monde est-il réceptif à l'hypnose ? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">L’hypnose est un état naturel que vous expérimentez déjà chaque jour...</div></div>
 </section>
 
 <section id="contact">
-  <a href="mailto:hypno.therapies.malard@gmail.com?subject=Demande%20de%20séance&body=Bonjour%20Vincent,%20je%20souhaite%20prendre%20rendez-vous..." 
-     class="cta-button">Réservez une séance</a>
-  <h2>Contactez-moi</h2>
-  <div>
-        <p>Par téléphone au 07 49 77 22 90</p>
-        <p>Par mail : hypno.therapies.malard@gmail.com</p>
-  </div>
-  <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez votre séance</a>
+<a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez une séance</a>
+<h2>Contactez-moi</h2>
+<div><p>Par téléphone au 07 49 77 22 90</p><p>Par mail : hypno.therapies.malard@gmail.com</p></div>
+<a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez votre séance</a>
 </section>
 
 <footer class="footer-logos">
-  <div class="logo-container">
-    <img src="ACCUEIL.jpg" alt="Logo" class="logo-footer">
-    <a href="https://www.facebook.com/VincentMalardHypnose?locale=fr_FR" target="_blank" rel="noopener">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="logo-footer">
-    </a>
-    <a href="#" target="_blank" rel="noopener">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="logo-footer">
-    </a>
-  </div>
+<div class="logo-container">
+<img src="ACCUEIL.jpg" alt="Logo" class="logo-footer">
+<a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="logo-footer"></a>
+<a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="logo-footer"></a>
+</div>
 </footer>
 
 <script>
 // FAQ déroulante
-const faqQuestions = document.querySelectorAll('.faq-question');
-faqQuestions.forEach(q => {
-    q.addEventListener('click', () => {
-        const answer = q.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-    });
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const ans = q.nextElementSibling;
+    ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
+  });
 });
 
-// Scroll horizontal infini des cartes témoignages
+// Carrousel fluide et infini
 const track = document.getElementById('testimonial-track');
-track.innerHTML += track.innerHTML; // duplique les cartes pour boucle infinie
-let position = 0;
-const speed = 1; // pixels par frame
-
-function scrollTestimonials() {
-    position -= speed;
-    if (Math.abs(position) >= track.scrollWidth / 2) {
-        position = 0; // reset imperceptible grâce à la duplication
-    }
-    track.style.transform = `translateX(${position}px)`;
-    requestAnimationFrame(scrollTestimonials);
-}
-scrollTestimonials();
-</script>
-
-</body>
-</html>
+// duplique les cartes pour boucle infinie
+track.inner

@@ -198,7 +198,32 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
     <div class="testimonial">« Découverte de l'hypnothérapie avec Vincent. Ses séances ont permis de faire disparaitre rapidement un état de stress et d'angoisse. »</div>
   </div>
 </div>
+
+<script>
+const track = document.getElementById('testimonial-track');
+const testimonials = Array.from(track.children);
+
+// Dupliquer les cartes pour boucle infinie
+testimonials.forEach(card => {
+  const clone = card.cloneNode(true);
+  track.appendChild(clone);
+});
+
+let position = 0;
+const speed = 0.5; // vitesse de défilement (px par frame)
+
+function animate() {
+  position -= speed;
+  if (position <= -track.scrollWidth / 2) {
+    position = 0; // reset pour boucle infinie
+  }
+  track.style.transform = `translateX(${position}px)`;
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
 </section>
+
 
 <section id="faq">
 <h2>FAQ</h2>

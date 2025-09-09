@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
-/* ===== Bandeau supérieur tout à droite ===== */
+/* ===== Bandeau supérieur ===== */
 .topbar {
   background-color: #0a2a43;
   color: white;
@@ -19,7 +19,7 @@
 }
 .topbar a { color: white; margin-left: 10px; text-decoration: none; }
 
-/* ===== Footer avec logos centrés ===== */
+/* ===== Footer ===== */
 .footer-logos{
   background-color: #062a47;
   padding: 15px 0;
@@ -98,19 +98,15 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 .service-card i { font-size: 2rem; color: #0a2a43; margin-bottom: 10px; }
 
-/* Parcours */
+/* Parcours/Présentation */
 #parcours img {
   width: 200px; aspect-ratio: 1 / 1; border-radius: 50%;
   object-fit: cover; display: block; margin: 0 auto 20px;
 }
 #parcours div { max-width: 800px; margin: 0 auto; text-align: center; }
 
-/* ===== Témoignages - carrousel fluide ===== */
-.testimonials-container {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-}
+/* Témoignages - carrousel fluide */
+.testimonials-container { overflow: hidden; width: 100%; position: relative; }
 .testimonials-track {
   display: flex;
   gap: 20px;
@@ -127,19 +123,8 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 }
 
 /* FAQ */
-.faq-item {
-  max-width: 800px;
-  margin: 0 auto 10px;
-  border-bottom: 1px solid #ccc;
-}
-.faq-question {
-  cursor: pointer;
-  padding: 15px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+.faq-item { max-width: 800px; margin: 0 auto 10px; border-bottom: 1px solid #ccc; }
+.faq-question { cursor: pointer; padding: 15px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
 .faq-answer { display: none; padding: 0 15px 15px; }
 
 /* Contact */
@@ -154,19 +139,19 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 </div>
 
 <nav>
-    <a href="#services">Services</a>
-    <a href="#parcours">Parcours</a>
-    <a href="#temoignages">Témoignages</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
+  <a href="#services">Services</a>
+  <a href="#parcours">Parcours</a>
+  <a href="#temoignages">Témoignages</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <header>
-    <div class="header-content">
-        <h1>Hypnose & Thérapies</h1>
-        <p>Votre bien-être commence ici</p>
-        <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez une séance</a>
-    </div>
+  <div class="header-content">
+    <h1>Hypnose & Thérapies</h1>
+    <p>Votre bien-être commence ici</p>
+    <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez une séance</a>
+  </div>
 </header>
 
 <section id="services">
@@ -181,16 +166,16 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
 <section id="parcours">
 <h2>Mon Parcours</h2>
-<img src="images/photo.jpg" alt="Photo de moi">
-<div><p>Je suis thérapeute certifié en hypnose éricksonienne et en EMDR-DSA...</p></div>
+<img src="images/ACCUEIL.jpg" alt="Photo de moi">
+<div><p>Je suis thérapeute certifié en hypnose éricksonienne et en EMDR-DSA. Élève de l'AHTMA à Vannes en 2019, j'ai suivi les différentes formations avec passion pour, depuis 2021 et jusqu'à aujourd'hui, être pleinement investi dans l’accompagnement de mes patients vers un mieux-être durable et personnalisé.</p></div>
 </section>
 
 <section id="temoignages">
 <h2>Témoignages</h2>
 <div class="testimonials-container">
   <div class="testimonials-track" id="testimonial-track">
-    <div class="testimonial">« Vincent m'a été d'une grande aide pour vaincre une angoisse. »</div>
-    <div class="testimonial">« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. »</div>
+    <div class="testimonial">« Vincent m'a été d'une grande aide pour vaincre une angoisse. Il a été à l'écoute, bienveillant, empathique. »</div>
+    <div class="testimonial">« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. Il a très rapidement cerné le problème. »</div>
     <div class="testimonial">« Au top, je me sens libérée de tous les poids qui pouvaient m'empêcher d'avancer. »</div>
     <div class="testimonial">« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. »</div>
     <div class="testimonial">« Juste génial, suite à un accident de la route, je me sens plus confiante et moins angoissée. »</div>
@@ -198,32 +183,7 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
     <div class="testimonial">« Découverte de l'hypnothérapie avec Vincent. Ses séances ont permis de faire disparaitre rapidement un état de stress et d'angoisse. »</div>
   </div>
 </div>
-
-<script>
-const track = document.getElementById('testimonial-track');
-const testimonials = Array.from(track.children);
-
-// Dupliquer les cartes pour boucle infinie
-testimonials.forEach(card => {
-  const clone = card.cloneNode(true);
-  track.appendChild(clone);
-});
-
-let position = 0;
-const speed = 0.5; // vitesse de défilement (px par frame)
-
-function animate() {
-  position -= speed;
-  if (position <= -track.scrollWidth / 2) {
-    position = 0; // reset pour boucle infinie
-  }
-  track.style.transform = `translateX(${position}px)`;
-  requestAnimationFrame(animate);
-}
-animate();
-</script>
 </section>
-
 
 <section id="faq">
 <h2>FAQ</h2>
@@ -257,7 +217,22 @@ document.querySelectorAll('.faq-question').forEach(q => {
   });
 });
 
-// Carrousel fluide et infini
+// Carrousel fluide et infini pour témoignages
 const track = document.getElementById('testimonial-track');
-// duplique les cartes pour boucle infinie
-track.inner
+const cards = Array.from(track.children);
+cards.forEach(card => track.appendChild(card.cloneNode(true))); // double pour boucle infinie
+
+let position = 0;
+const speed = 0.5;
+
+function animate() {
+  position -= speed;
+  if (position <= -track.scrollWidth / 2) position = 0;
+  track.style.transform = `translateX(${position}px)`;
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>

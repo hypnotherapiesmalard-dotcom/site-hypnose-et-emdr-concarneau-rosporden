@@ -209,20 +209,21 @@ h2 {
 
 /* Contact */
 #contact {
+  text-align: center; /* coordonnées et boutons restent centrés */
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* centre horizontalement tout ce qui est à l'intérieur */
-  text-align: left;    /* garde les labels alignés à gauche */
   gap: 20px;
-  padding: 40px 20px;
 }
 
+/* Centrage uniquement du formulaire */
 #contact form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 100%;
   max-width: 600px;
+  margin: 0 auto; /* centre le formulaire horizontalement */
 }
 </style>
 </head>
@@ -311,14 +312,14 @@ h2 {
         <div class="faq-question">Puis-je avoir un suivi personnalisé ? <i class="fas fa-chevron-down"></i></div>
         <div class="faq-answer">Oui, des suivis réguliers sont proposés selon vos objectifs et besoins spécifiques.</div>
     </div>
-  <div class="faq-item">
+    <div class="faq-item">
         <div class="faq-question">Combien coûte une séance ? Et combien de séances sont nécessaires ?<i class="fas fa-chevron-down"></i></div>
         <div class="faq-answer">Une séance d'hypnose ou d'Emdr coûte 55 Euros et peut être remboursée par la mutuelle. Les thérapies brèves vous font aller mieux en quelques séances, espacées de 2 à 3 semaines.</div>
     </div>
     <div class="faq-item">
         <div class="faq-question">Tout le monde est il réceptif à l'hypnose ?<i class="fas fa-chevron-down"></i></div>
         <div class="faq-answer">L’hypnose est un état naturel, que vous expérimentez déjà chaque jour sans le savoir, par exemple lorsque vous êtes plongé dans un film ou absorbé dans vos pensées. J'amplifie cet état pour ensuite travailler avec votre inconscient sur vos objectifs.</div>
-</div>
+    </div>
 </section>
 
 <section id="contact">
@@ -335,7 +336,7 @@ h2 {
   <a href="mailto:hypno.therapies.malard@gmail.com?subject=Demande%20de%20séance&body=Bonjour%20Vincent,%20je%20souhaite%20prendre%20rendez-vous..." 
      class="cta-button">Réservez votre séance</a>
 
-  <!-- Formulaire Formspree centré -->
+  <!-- Formulaire Formspree centré uniquement -->
   <form action="https://formspree.io/f/your-form-id" method="POST">
     <label>
       Nom :

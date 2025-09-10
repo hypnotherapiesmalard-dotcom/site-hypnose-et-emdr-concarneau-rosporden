@@ -317,9 +317,30 @@ h2 {
         <p>Par mail : hypno.therapies.malard@gmail.com</p>
         <p>Adresse: 8 rue de Névars, 29140 Rosporden; ou Anahata, Centre de santé intégrative, 5 bis rue des écoles 29900 Concarneau</p>
   </div>
+
   <a href="mailto:hypno.therapies.malard@gmail.com?subject=Demande%20de%20séance&body=Bonjour%20Vincent,%20je%20souhaite%20prendre%20rendez-vous..." 
      class="cta-button">Réservez votre séance</a>
+
+  <!-- === Formulaire de contact Formspree === -->
+  <div style="max-width:600px;margin:40px auto;">
+    <form action="https://formspree.io/f/your-form-id" method="POST" style="display:flex;flex-direction:column;gap:15px;text-align:left;">
+      <label>
+        Nom :
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Email :
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Message :
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button type="submit" class="cta-button">Envoyer</button>
+    </form>
+  </div>
 </section>
+
 
 <footer class="footer-logos">
   <div class="logo-container">

@@ -211,6 +211,16 @@ h2 {
 #contact {
   text-align: center;
 }
+
+/* Formulaire centré */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
 </style>
 </head>
 <body>
@@ -305,6 +315,7 @@ h2 {
     <div class="faq-item">
         <div class="faq-question">Tout le monde est il réceptif à l'hypnose ?<i class="fas fa-chevron-down"></i></div>
         <div class="faq-answer">L’hypnose est un état naturel, que vous expérimentez déjà chaque jour sans le savoir, par exemple lorsque vous êtes plongé dans un film ou absorbé dans vos pensées. J'amplifie cet état pour ensuite travailler avec votre inconscient sur vos objectifs.</div>
+</div>
 </section>
 
 <section id="contact">
@@ -321,26 +332,23 @@ h2 {
   <a href="mailto:hypno.therapies.malard@gmail.com?subject=Demande%20de%20séance&body=Bonjour%20Vincent,%20je%20souhaite%20prendre%20rendez-vous..." 
      class="cta-button">Réservez votre séance</a>
 
-  <!-- === Formulaire de contact Formspree === -->
-  <div style="max-width:600px;margin:40px auto;">
-    <form action="https://formspree.io/f/your-form-id" method="POST" style="display:flex;flex-direction:column;gap:15px;text-align:left;">
-      <label>
-        Nom :
-        <input type="text" name="name" required>
-      </label>
-      <label>
-        Email :
-        <input type="email" name="email" required>
-      </label>
-      <label>
-        Message :
-        <textarea name="message" rows="5" required></textarea>
-      </label>
-      <button type="submit" class="cta-button">Envoyer</button>
-    </form>
-  </div>
+  <!-- Formulaire Formspree centré -->
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <label>
+      Nom :
+      <input type="text" name="name" required>
+    </label>
+    <label>
+      Email :
+      <input type="email" name="email" required>
+    </label>
+    <label>
+      Message :
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+    <button type="submit" class="cta-button">Envoyer</button>
+  </form>
 </section>
-
 
 <footer class="footer-logos">
   <div class="logo-container">

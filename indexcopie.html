@@ -209,21 +209,29 @@ h2 {
 
 /* Contact */
 #contact {
-  text-align: center; /* coordonnées et boutons restent centrés */
+  text-align: center;
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Centrage uniquement du formulaire */
+/* CENTRAGE UNIQUEMENT DES CHAMPS DU FORMULAIRE */
 #contact form {
   display: flex;
   flex-direction: column;
+  align-items: center; /* centre les champs horizontalement */
   gap: 15px;
+}
+
+#contact form input,
+#contact form textarea {
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto; /* centre le formulaire horizontalement */
+  max-width: 400px; /* largeur fixe pour les cadres */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 </style>
 </head>
@@ -248,8 +256,7 @@ h2 {
     <div class="header-content">
         <h1>Hypnose & Thérapies</h1>
         <p>Votre bien-être commence ici</p>
-        <a href="mailto:hypno.therapies.malard@gmail.com?subject=Demande%20de%20séance&body=Bonjour%20Vincent,%20je%20souhaite%20prendre%20rendez-vous..." 
-           class="cta-button">Réservez une séance</a>
+        <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez une séance</a>
     </div>
 </header>
 
@@ -291,13 +298,13 @@ h2 {
     <h2>Témoignages</h2>
     <div class="testimonials-container">
       <div class="testimonials-track" id="testimonial-track">
-        <div class="testimonial"><p>« Vincent m'a été d'une grande aide pour vaincre une angoisse. Il a été à l'écoute, bienveillant, empathique. J'ai réussi grâce à ses pratiques comme l'EMDR à gagner certaines batailles ! Je recommande vivement pour un moment de sérénité et un réel changement dans sa vie ! Merci encore Vincent et peut-être à très vite ! »</p></div>
-        <div class="testimonial"><p>« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. Il a très rapidement cerné le problème et par l'EMDR puis l'hypnose a fait taire l'anxiété l'attente. À voir comment cela évolue dans les prochains mois, mais j'ai repris confiance et je suis serein. Un thérapeute rare : bienveillant, disponible, efficace et profondément humain. MERCI VINCENT. »</p></div>
-        <div class="testimonial"><p>« Au top, véritablement j'ai l'impression de renaître, je me sens libérée de tous les poids qui pouvaient m'empêcher d'avancer. Aujourd'hui est une nouvelle vie et une autre page qui s'écrit. Vous pouvez lui donner toute votre confiance, il vous aidera et je vous invite à y aller. Merci Vincent pour votre accompagnement. Merci beaucoup de m'avoir libéré de tous mes maux.. »</p></div>
-        <div class="testimonial"><p>« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. Très bon accueil et échange merci pour votre aide. Je recommande »</p></div>
-        <div class="testimonial"><p>« Juste génial, Après plusieurs séances dûes à un accident de la route. Je me sens plus confiante et moins angoissée à remettre les pieds dans une voiture. Reprise des heures de conduite, plus sure de moi. Grande diminution des douleurs causées par l'accident . Je recommande vivement pour retrouver un équilibre, et se sentir plus léger.. »</p></div>
-        <div class="testimonial"><p>« Vincent m'a aidé à stopper l'envie de fumer. En seulement 2 séances, la nicotine à fui mon cerveau. Je m'en porte très bien et mon porte monnaie aussi :)»</p></div>
-        <div class="testimonial"><p>« Découverte de l'hypnothérapie avec Vincent. Ses séances d'Edmr et hypnose ont permis de faire disparaitre rapidement un récent état de stress et d'angoisse. Vincent est à l'écoute et est très efficace pour cibler et traiter les causes des problèmes. »</p></div>
+        <div class="testimonial"><p>« Vincent m'a été d'une grande aide pour vaincre une angoisse... »</p></div>
+        <div class="testimonial"><p>« J'ai rencontré Vincent après plusieurs années d'anxiété... »</p></div>
+        <div class="testimonial"><p>« Au top, véritablement j'ai l'impression de renaître... »</p></div>
+        <div class="testimonial"><p>« Séance pour arrêt du tabac. Très bon résultat... »</p></div>
+        <div class="testimonial"><p>« Juste génial, Après plusieurs séances dûes à un accident... »</p></div>
+        <div class="testimonial"><p>« Vincent m'a aidé à stopper l'envie de fumer... »</p></div>
+        <div class="testimonial"><p>« Découverte de l'hypnothérapie avec Vincent... »</p></div>
       </div>
     </div>
 </section>
@@ -318,38 +325,27 @@ h2 {
     </div>
     <div class="faq-item">
         <div class="faq-question">Tout le monde est il réceptif à l'hypnose ?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">L’hypnose est un état naturel, que vous expérimentez déjà chaque jour sans le savoir, par exemple lorsque vous êtes plongé dans un film ou absorbé dans vos pensées. J'amplifie cet état pour ensuite travailler avec votre inconscient sur vos objectifs.</div>
+        <div class="faq-answer">L’hypnose est un état naturel, que vous expérimentez déjà chaque jour sans le savoir... </div>
     </div>
 </section>
 
 <section id="contact">
-  <a href="mailto:hypno.therapies.malard@gmail.com?subject=Demande%20de%20séance&body=Bonjour%20Vincent,%20je%20souhaite%20prendre%20rendez-vous..." 
-     class="cta-button">Réservez une séance</a>
+  <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez une séance</a>
 
   <h2>Contactez-moi</h2>
   <div>
-        <p>Par téléphone au 0749772290</p>
-        <p>Par mail : hypno.therapies.malard@gmail.com</p>
-        <p>Adresse: 8 rue de Névars, 29140 Rosporden; ou Anahata, Centre de santé intégrative, 5 bis rue des écoles 29900 Concarneau</p>
+    <p>Par téléphone au 0749772290</p>
+    <p>Par mail : hypno.therapies.malard@gmail.com</p>
+    <p>Adresse: 8 rue de Névars, 29140 Rosporden; ou Anahata, Centre de santé intégrative, 5 bis rue des écoles 29900 Concarneau</p>
   </div>
 
-  <a href="mailto:hypno.therapies.malard@gmail.com?subject=Demande%20de%20séance&body=Bonjour%20Vincent,%20je%20souhaite%20prendre%20rendez-vous..." 
-     class="cta-button">Réservez votre séance</a>
+  <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez votre séance</a>
 
-  <!-- Formulaire Formspree centré uniquement -->
+  <!-- FORMULAIRE CENTRÉ -->
   <form action="https://formspree.io/f/your-form-id" method="POST">
-    <label>
-      Nom :
-      <input type="text" name="name" required>
-    </label>
-    <label>
-      Email :
-      <input type="email" name="email" required>
-    </label>
-    <label>
-      Message :
-      <textarea name="message" rows="5" required></textarea>
-    </label>
+    <input type="text" name="name" placeholder="Nom" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" rows="5" placeholder="Message" required></textarea>
     <button type="submit" class="cta-button">Envoyer</button>
   </form>
 </section>
@@ -370,27 +366,24 @@ h2 {
 // FAQ déroulante
 const faqQuestions = document.querySelectorAll('.faq-question');
 faqQuestions.forEach(q => {
-    q.addEventListener('click', () => {
-        const answer = q.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-    });
+  q.addEventListener('click', () => {
+      const answer = q.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+  });
 });
 
-// Témoignages défilement fluide et infini
+// Témoignages défilement
 const track = document.getElementById('testimonial-track');
 const cards = Array.from(track.children);
 cards.forEach(card => track.appendChild(card.cloneNode(true)));
-
 let position = 0;
 const speed = 0.5;
-
 function animate() {
-    position -= speed;
-    if(position <= -track.scrollWidth/2) position = 0;
-    track.style.transform = `translateX(${position}px)`;
-    requestAnimationFrame(animate);
+  position -= speed;
+  if(position <= -track.scrollWidth/2) position = 0;
+  track.style.transform = `translateX(${position}px)`;
+  requestAnimationFrame(animate);
 }
-
 animate();
 </script>
 

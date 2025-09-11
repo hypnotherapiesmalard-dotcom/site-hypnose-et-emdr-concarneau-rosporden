@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hypnotherapiesmalard-dotcom.github.io/site-hypnose-et-emdr-concarneau-rosporden/gtfg.xml

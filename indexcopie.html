@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hypnose & Thérapies</title>
+<meta name="google-site-verification" content="hvlX-ilN5O3XTmCyVTd4_OkTrcTG2fWSaJRX3dhmx9Y" />
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
@@ -56,7 +57,6 @@ body {
   margin: 0;
   line-height: 1.6;
   color: #333;
-  /* ===== Fond discret et apaisant ===== */
   background: linear-gradient(135deg, #f0f8ff, #e6f7f1, #fffaf0);
 }
 
@@ -186,6 +186,11 @@ h2 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   flex-shrink: 0;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
 }
 
 /* FAQ */
@@ -247,12 +252,13 @@ h2 {
 <nav>
     <a href="#services">Services</a>
     <a href="#parcours">Parcours</a>
+    <a href="#approche">Approche</a>
+    <a href="#conseils">Conseils</a>
     <a href="#temoignages">Témoignages</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
+    <a href="#localisation">Localisation</a>
 </nav>
-
-<div class="decorative-banner"></div>
 
 <header>
     <div class="header-content">
@@ -296,6 +302,34 @@ h2 {
     </div>
 </section>
 
+<!-- Nouvelle section Approche -->
+<section id="approche">
+  <h2>Mon Approche</h2>
+  <div style="max-width:900px;margin:0 auto;text-align:center;line-height:1.6;">
+    <p>Chaque séance est unique et centrée sur vos besoins. Je combine hypnose éricksonienne et EMDR-DSA pour vous aider à libérer vos blocages, renforcer votre confiance et retrouver équilibre et sérénité.</p>
+    <p>Ma pratique repose sur l'écoute, le respect et la bienveillance, afin de créer un espace sûr où vous pouvez avancer à votre rythme.</p>
+  </div>
+</section>
+
+<!-- Nouvelle section Conseils Bien-être -->
+<section id="conseils">
+  <h2>Conseils Bien-être</h2>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;">
+    <div style="background:#f8f8f8;padding:20px;border-radius:15px;width:250px;text-align:center;">
+      <h3>Gérer le stress</h3>
+      <p>Techniques simples pour réduire le stress au quotidien et retrouver calme et sérénité.</p>
+    </div>
+    <div style="background:#f8f8f8;padding:20px;border-radius:15px;width:250px;text-align:center;">
+      <h3>Sommeil réparateur</h3>
+      <p>Astuces pour améliorer votre sommeil grâce à la relaxation et à l'hypnose.</p>
+    </div>
+    <div style="background:#f8f8f8;padding:20px;border-radius:15px;width:250px;text-align:center;">
+      <h3>Confiance en soi</h3>
+      <p>Exercices et méthodes pour renforcer votre estime personnelle et votre assurance.</p>
+    </div>
+  </div>
+</section>
+
 <section id="temoignages">
     <h2>Témoignages</h2>
     <div class="testimonials-container">
@@ -325,6 +359,7 @@ h2 {
     </div>
 </section>
 
+<!-- Section FAQ inchangée -->
 <section id="faq">
     <h2>FAQ</h2>
     <div class="faq-item">
@@ -364,6 +399,16 @@ h2 {
     <textarea name="message" rows="5" placeholder="Message" required></textarea>
     <button type="submit" class="cta-button">Envoyer</button>
   </form>
+</section>
+
+<!-- Nouvelle section Localisation -->
+<section id="localisation">
+  <h2>Où me trouver</h2>
+  <div style="max-width:900px;margin:0 auto;text-align:center;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." 
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <p>Mes cabinets : <strong>Rosporden</strong> et <strong>Concarneau</strong></p>
+  </div>
 </section>
 
 <footer class="footer-logos">

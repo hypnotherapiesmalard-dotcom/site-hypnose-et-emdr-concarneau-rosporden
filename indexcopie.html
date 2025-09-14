@@ -45,8 +45,8 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
 /* Approche et conseils */
 #approche div, #conseils div { max-width:900px; margin:0 auto; text-align:center; line-height:1.6; }
-#conseils div { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-#conseils div > div { background:#d6f0e0; padding:20px; border-radius:15px; width:250px; text-align:center; transition: transform 0.3s ease; }
+#conseils div { display:flex; flex-wrap: nowrap; overflow-x:auto; gap:20px; justify-content:center; }
+#conseils div > div { background:#d6f0e0; padding:20px; border-radius:15px; min-width:250px; text-align:center; flex-shrink:0; transition: transform 0.3s ease; }
 #conseils div > div:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 
 /* Témoignages */
@@ -128,6 +128,7 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
     <p>Je suis thérapeute certifié en hypnose éricksonienne et en EMDR-DSA. Elève de l'AHTMA à Vannes en 2019, j'ai suivi les différentes formations avec passion pour, depuis 2021 et jusqu'à aujourd'hui, être pleinement investi dans l’accompagnement de mes patients vers un mieux-être durable et personnalisé. Vous pouvez prendre RDV à Concarneau ou Rosporden, ou simplement me contacter pour avoir des renseignements sur ma pratique.</p>
   </div>
 </section>
+
 <section id="approche">
   <h2>Mon Approche</h2>
   <div>
@@ -137,20 +138,20 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
 <section id="conseils">
   <h2>Conseils pour votre bien-être</h2>
-  <div>
-    <div>
+  <div style="display:flex; flex-wrap: nowrap; overflow-x:auto; gap:20px; justify-content:center;">
+    <div style="background:#d6f0e0; padding:20px; border-radius:15px; min-width:250px; text-align:center; flex-shrink:0;">
       <h3>Respiration consciente</h3>
       <p>Pratiquez la respiration profonde pour réduire le stress et l'anxiété.</p>
     </div>
-    <div>
+    <div style="background:#d6f0e0; padding:20px; border-radius:15px; min-width:250px; text-align:center; flex-shrink:0;">
       <h3>Méditation quotidienne</h3>
       <p>Quelques minutes par jour suffisent pour améliorer votre concentration et sérénité.</p>
     </div>
-    <div>
+    <div style="background:#d6f0e0; padding:20px; border-radius:15px; min-width:250px; text-align:center; flex-shrink:0;">
       <h3>Sommeil réparateur</h3>
       <p>Respectez un rythme régulier pour un sommeil de qualité et un mieux-être général.</p>
     </div>
-    <div>
+    <div style="background:#d6f0e0; padding:20px; border-radius:15px; min-width:250px; text-align:center; flex-shrink:0;">
       <h3>Activité physique</h3>
       <p>Bouger régulièrement aide à libérer les tensions et favorise un esprit clair.</p>
     </div>
@@ -186,6 +187,26 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
   </div>
 </section>
 
+<section id="faq">
+  <h2>FAQ</h2>
+  <div class="faq-item">
+      <div class="faq-question">Comment se déroule une séance ? <i class="fas fa-chevron-down"></i></div>
+      <div class="faq-answer">Chaque séance dure environ 1h et se déroule en toute confidentialité, adaptée à vos besoins.</div>
+  </div>
+  <div class="faq-item">
+      <div class="faq-question">Puis-je avoir un suivi personnalisé ? <i class="fas fa-chevron-down"></i></div>
+      <div class="faq-answer">Oui, des suivis réguliers sont proposés selon vos objectifs et besoins spécifiques.</div>
+  </div>
+  <div class="faq-item">
+      <div class="faq-question">Combien coûte une séance ? Et combien de séances sont nécessaires ?<i class="fas fa-chevron-down"></i></div>
+      <div class="faq-answer">Une séance d'hypnose ou d'Emdr coûte 55 Euros et peut être remboursée par la mutuelle. Les thérapies brèves vous font aller mieux en quelques séances, espacées de 2 à 3 semaines.</div>
+  </div>
+  <div class="faq-item">
+      <div class="faq-question">Tout le monde est il réceptif à l'hypnose ?<i class="fas fa-chevron-down"></i></div>
+      <div class="faq-answer">L’hypnose est un état naturel, que vous expérimentez déjà chaque jour sans le savoir, par exemple lorsque vous êtes plongé dans un film ou absorbé dans vos pensées. J'amplifie cet état pour ensuite travailler avec votre inconscient sur vos objectifs.</div>
+  </div>
+</section>
+
 <section id="contact">
   <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez une séance</a>
 
@@ -208,9 +229,16 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
 <section id="localisation">
   <h2>Où me trouver</h2>
-  <p>Vous pouvez cliquer sur la carte pour obtenir l'itinéraire vers mon cabinet.</p>
+  <p>Vous pouvez cliquer sur les cartes pour obtenir l'itinéraire vers mes cabinets.</p>
+
+  <!-- Carte Rosporden -->
   <a href="https://www.google.com/maps/dir//8+Rue+de+N%C3%A9vars,+29140+Rosporden" target="_blank">
-    <img src="https://maps.googleapis.com/maps/api/staticmap?center=8+Rue+de+Névars,+29140+Rosporden&zoom=15&size=800x400&markers=color:red%7C8+Rue+de+Névars,+29140+Rosporden" alt="Carte Rosporden" style="width:100%; border-radius:15px;">
+    <img src="https://maps.googleapis.com/maps/api/staticmap?center=8+Rue+de+Névars,+29140+Rosporden&zoom=15&size=800x400&markers=color:red%7C8+Rue+de+Névars,+29140+Rosporden" alt="Carte Rosporden" style="width:100%; border-radius:15px; margin-bottom:20px;">
+  </a>
+
+  <!-- Carte Concarneau -->
+  <a href="https://www.google.com/maps/dir//5+bis+rue+des+écoles,+29900+Concarneau" target="_blank">
+    <img src="https://maps.googleapis.com/maps/api/staticmap?center=5+bis+rue+des+écoles,+29900+Concarneau&zoom=15&size=800x400&markers=color:red%7C5+bis+rue+des+écoles,+29900+Concarneau" alt="Carte Concarneau" style="width:100%; border-radius:15px;">
   </a>
 </section>
 

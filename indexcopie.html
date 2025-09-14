@@ -7,22 +7,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
-/* ===== Bandeau supérieur ===== */
+/* Bandeau supérieur */
 .topbar { background-color: #0a2a43; color: white; display: flex; justify-content: flex-end; align-items: center; padding: 8px 20px; font-size: 0.95rem; }
 .topbar a { color: white; margin-left: 10px; text-decoration: none; }
 
-/* ===== Footer ===== */
+/* Footer */
 .footer-logos{ background-color: #062a47; padding: 15px 0; text-align: center; }
 .footer-logos .logo-container{ display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
 .footer-logos .logo-footer{ height: 32px; width: auto; display: inline-block; transition: transform 0.2s ease; }
 .footer-logos .logo-footer:hover{ transform: scale(1.1); }
 
-/* ===== Styles généraux ===== */
+/* Styles généraux */
 body { font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; color: #333; background: linear-gradient(135deg, #f0f8ff, #e6f7f1, #fffaf0); }
 nav { display: flex; justify-content: center; gap: 20px; padding: 15px 0; background-color: #0a2a43; }
 nav a { color: white; text-decoration: none; font-weight: bold; }
 
-/* ===== Header ===== */
+/* Header */
 header { background: url('images/ACCUEIL.jpg') center/cover no-repeat; color: #0a2a43; text-align: center; padding: 100px 20px 60px; }
 header h1 { font-size: 3rem; margin-bottom: 10px; }
 header p { font-size: 1.2rem; margin-bottom: 20px; }
@@ -33,21 +33,14 @@ header p { font-size: 1.2rem; margin-bottom: 20px; }
 section { padding: 60px 20px; }
 h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
-/* Services */
-.services { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-.service-card { background-color: #d6e6f0; padding: 20px; border-radius: 20px; width: 250px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+/* Services et Conseils */
+.services { display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 20px; max-width: 1200px; margin: 0 auto; }
+.service-card { background-color: #f8f8f8; padding: 20px; border-radius: 20px; width: 23%; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
-.service-card i { font-size: 2rem; color: #0a2a43; margin-bottom: 10px; }
 
 /* Parcours */
 #parcours img { width: 300px; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 20px; }
 #parcours div { max-width: 800px; margin: 0 auto; text-align: center; }
-
-/* Approche et conseils */
-#approche div, #conseils div { max-width:900px; margin:0 auto; text-align:center; line-height:1.6; }
-#conseils div { display:flex; flex-wrap: nowrap; overflow-x:auto; gap:20px; justify-content:center; }
-#conseils div > div { background:#d6f0e0; padding:20px; border-radius:15px; min-width:250px; text-align:center; flex-shrink:0; transition: transform 0.3s ease; }
-#conseils div > div:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 
 /* Témoignages */
 .testimonials-container { overflow: hidden; position: relative; width: 100%; }
@@ -66,7 +59,7 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 #contact form input, #contact form textarea { width: 100%; max-width: 400px; padding: 10px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
 
 /* Localisation */
-#localisation iframe { width:100%; height:400px; border:0; border-radius:15px; }
+#localisation iframe, #localisation img { width:100%; height:400px; border:0; border-radius:15px; margin-bottom:20px; }
 </style>
 </head>
 <body>
@@ -79,7 +72,6 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 <nav>
   <a href="#services">Services</a>
   <a href="#parcours">Parcours</a>
-  <a href="#approche">Approche</a>
   <a href="#conseils">Conseils</a>
   <a href="#temoignages">Témoignages</a>
   <a href="#faq">FAQ</a>
@@ -129,35 +121,27 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
   </div>
 </section>
 
-<section id="approche">
-  <h2>Mon Approche</h2>
-  <div>
-    <p>Je combine différentes techniques comme l'hypnose éricksonienne et l'EMDR-DSA pour un accompagnement personnalisé. Mon objectif est de vous aider à retrouver équilibre, sérénité et confiance en vous.</p>
-  </div>
-</section>
-
 <section id="conseils">
   <h2>Conseils pour votre bien-être</h2>
-  <div style="display:flex; justify-content:space-between; gap:1%; max-width:1000px; margin:0 auto;">
-    <div class="service-card" style="width:23%;">
+  <div class="services">
+    <div class="service-card">
       <h3>Respiration consciente</h3>
       <p>Pratiquez la respiration profonde pour réduire le stress et l'anxiété.</p>
     </div>
-    <div class="service-card" style="width:23%;">
+    <div class="service-card">
       <h3>Méditation quotidienne</h3>
       <p>Quelques minutes par jour suffisent pour améliorer votre concentration et sérénité.</p>
     </div>
-    <div class="service-card" style="width:23%;">
+    <div class="service-card">
       <h3>Sommeil réparateur</h3>
       <p>Respectez un rythme régulier pour un sommeil de qualité et un mieux-être général.</p>
     </div>
-    <div class="service-card" style="width:23%;">
+    <div class="service-card">
       <h3>Activité physique</h3>
       <p>Bouger régulièrement aide à libérer les tensions et favorise un esprit clair.</p>
     </div>
   </div>
 </section>
-
 
 <section id="temoignages">
   <h2>Témoignages</h2>
@@ -210,16 +194,13 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
 <section id="contact">
   <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez une séance</a>
-
   <h2>Contactez-moi</h2>
   <div>
     <p>Par téléphone au 0749772290</p>
     <p>Par mail : hypno.therapies.malard@gmail.com</p>
     <p>Adresse: 8 rue de Névars, 29140 Rosporden; ou Anahata, Centre de santé intégrative, 5 bis rue des écoles 29900 Concarneau</p>
   </div>
-
   <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez votre séance</a>
-
   <form action="https://formspree.io/f/mandvbvl" method="POST">
     <input type="text" name="name" placeholder="Nom" required>
     <input type="email" name="email" placeholder="Email" required>
@@ -230,16 +211,13 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
 <section id="localisation">
   <h2>Où me trouver</h2>
-  <p>Vous pouvez cliquer sur les cartes pour obtenir l'itinéraire vers mes cabinets.</p>
-
-  <!-- Carte Rosporden -->
+  <!-- Rosporden -->
   <a href="https://www.google.com/maps/dir//8+Rue+de+N%C3%A9vars,+29140+Rosporden" target="_blank">
-    <img src="https://maps.googleapis.com/maps/api/staticmap?center=8+Rue+de+Névars,+29140+Rosporden&zoom=15&size=800x400&markers=color:red%7C8+Rue+de+Névars,+29140+Rosporden" alt="Carte Rosporden" style="width:100%; border-radius:15px; margin-bottom:20px;">
+    <img src="https://maps.googleapis.com/maps/api/staticmap?center=8+Rue+de+Névars,+29140+Rosporden&zoom=15&size=800x400&markers=color:red%7C8+Rue+de+Névars,+29140+Rosporden" alt="Carte Rosporden">
   </a>
-
-  <!-- Carte Concarneau -->
+  <!-- Concarneau -->
   <a href="https://www.google.com/maps/dir//5+bis+rue+des+écoles,+29900+Concarneau" target="_blank">
-    <img src="https://maps.googleapis.com/maps/api/staticmap?center=5+bis+rue+des+écoles,+29900+Concarneau&zoom=15&size=800x400&markers=color:red%7C5+bis+rue+des+écoles,+29900+Concarneau" alt="Carte Concarneau" style="width:100%; border-radius:15px;">
+    <img src="https://maps.googleapis.com/maps/api/staticmap?center=5+bis+rue+des+écoles,+29900+Concarneau&zoom=15&size=800x400&markers=color:red%7C5+bis+rue+des+écoles,+29900+Concarneau" alt="Carte Concarneau">
   </a>
 </section>
 

@@ -3,7 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hypnose & Thérapies</title>
+
+<!-- 🔑 SEO ajoutés -->
+<title>Hypnose & Thérapies à Rosporden et Concarneau | Vincent Malard</title>
+<meta name="description" content="Thérapeute certifié en hypnose éricksonienne et EMDR-DSA à Rosporden et Concarneau. Gestion du stress, anxiété, phobies, traumatismes, addictions, sommeil et développement personnel.">
+<meta name="keywords" content="hypnose Rosporden, hypnose Concarneau, EMDR Finistère, hypnose éricksonienne, arrêter de fumer hypnose, stress, anxiété, thérapie brève, sommeil, phobies, confiance en soi">
+<meta name="author" content="Vincent Malard">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Hypnose & Thérapies - Vincent Malard">
+<meta property="og:description" content="Séances d’hypnose et EMDR-DSA à Rosporden et Concarneau. Thérapie brève pour mieux-être durable.">
+<meta property="og:image" content="images/ACCUEIL.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://ton-site.fr">
+
+<!-- Schema LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Hypnose & Thérapies - Vincent Malard",
+  "image": "https://ton-site.fr/images/ACCUEIL.jpg",
+  "telephone": "+33749772290",
+  "email": "hypno.therapies.malard@gmail.com",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "8 rue de Névars",
+      "addressLocality": "Rosporden",
+      "postalCode": "29140",
+      "addressCountry": "FR"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "5 bis rue des écoles",
+      "addressLocality": "Concarneau",
+      "postalCode": "29900",
+      "addressCountry": "FR"
+    }
+  ],
+  "url": "https://ton-site.fr",
+  "sameAs": [
+    "https://www.facebook.com/VincentMalardHypnose",
+    "https://www.instagram.com/tonprofil"
+  ]
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
@@ -19,8 +66,8 @@
 
 /* Styles généraux */
 body { font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; color: #333; background: linear-gradient(135deg, #f0f8ff, #e6f7f1, #fffaf0); }
-nav { display: flex; justify-content: center; gap: 20px; padding: 15px 0; background-color: #0a2a43; }
-nav a { color: white; text-decoration: none; font-weight: bold; }
+nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 15px 10px; background-color: #0a2a43; }
+nav a { color: white; text-decoration: none; font-weight: bold; white-space: nowrap; }
 
 /* Header */
 header { background: url('images/ACCUEIL.jpg') center/cover no-repeat; color: #0a2a43; text-align: center; padding: 100px 20px 60px; }
@@ -36,7 +83,7 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 /* Services et Conseils */
 .services {
   display: flex;
-  flex-wrap: wrap; /* autorise le passage sur plusieurs lignes si nécessaire */
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
   max-width: 1200px;
@@ -136,7 +183,7 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
 <section id="parcours">
   <h2>Mon Parcours</h2>
-  <img src="httpslh3.googleusercontent.compAF1QipMlsskJ_oddrTPGuRjE6kA9yZmy1NYtPJdmu4YD=w141-h141-n-k-no-nu.jpg" alt="Photo de moi">
+  <img src="httpslh3.googleusercontent.compAF1QipMlsskJ_oddrTPGuRjE6kA9yZmy1NYtPJdmu4YD=w141-h141-n-k-no-nu.jpg" alt="Portrait de Vincent Malard, hypnothérapeute à Rosporden et Concarneau">
   <div>
     <p>Je suis thérapeute certifié en hypnose éricksonienne et en EMDR-DSA. Elève de l'AHTMA à Vannes en 2019, j'ai suivi les différentes formations avec passion pour, depuis 2021 et jusqu'à aujourd'hui, être pleinement investi dans l’accompagnement de mes patients vers un mieux-être durable et personnalisé. Vous pouvez prendre RDV à Concarneau ou Rosporden, ou simplement me contacter pour avoir des renseignements sur ma pratique.</p>
   </div>
@@ -222,59 +269,50 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
     <p>Adresse: 8 rue de Névars, 29140 Rosporden; ou Anahata, Centre de santé intégrative, 5 bis rue des écoles 29900 Concarneau</p>
   </div>
   <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez votre séance</a>
-  <form action="https://formspree.io/f/mandvbvl" method="POST">
-    <input type="text" name="name" placeholder="Nom" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" rows="5" placeholder="Message" required></textarea>
+  <form action="https://formspree.io/f/xpwzhngr" method="POST">
+    <input type="text" name="name" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre email" required>
+    <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
     <button type="submit" class="cta-button">Envoyer</button>
   </form>
 </section>
 
 <section id="localisation">
-  <h2>Où me trouver</h2>
-
-  <!-- Rosporden -->
-  <h3>Rosporden</h3>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d85491.84949146704!2d-3.8980258460211004!3d47.96306613208147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x4810de3b8d2dde41%3A0x4472e4ed2b50e8ef!2s8%20Rue%20de%20N%C3%A9vars%2C%2029140%20Rosporden!3m2!1d47.963095599999995!2d-3.8156253999999996!5e0!3m2!1sfr!2sfr!4v1757845331625!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-  <!-- Concarneau -->
-  <h3>Concarneau</h3>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d85641.5620614577!2d-4.001917751415456!3d47.87254162255919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x4810db21a648e87f%3A0xc7ad183a75ea4f!2s5%20bis%20Rue%20des%20%C3%89coles%2C%2029900%20Concarneau!3m2!1d47.872571099999995!2d-3.9195173!5e0!3m2!1sfr!2sfr!4v1757844992839!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <h2>Où me trouver ?</h2>
+  <div>
+    <h3>Cabinet de Rosporden</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.2070385506075!2d-3.827949223560914!3d47.96092526368042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x481099f64825cc1f%3A0xf1c0480a4e1d9ee7!2s8%20Rue%20de%20N%C3%A9vars%2C%2029140%20Rosporden!5e0!3m2!1sfr!2sfr!4v1737717539516!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" title="Localisation cabinet hypnose à Rosporden"></iframe>
+    <h3>Cabinet de Concarneau</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10639.183112142548!2d-3.9284724965683644!3d47.87564804235445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48107d5564aaf30f%3A0x2a96d18b8df401e9!2sAnahata%20Concarneau%20Centre%20de%20Sant%C3%A9%20Int%C3%A9grative!5e0!3m2!1sfr!2sfr!4v1737717825672!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" title="Localisation cabinet hypnose à Concarneau"></iframe>
+  </div>
 </section>
 
 <footer class="footer-logos">
   <div class="logo-container">
-    <img src="ACCUEIL.jpg" alt="Logo" class="logo-footer">
-    <a href="https://www.facebook.com/VincentMalardHypnose?locale=fr_FR" target="_blank" rel="noopener">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="logo-footer">
-    </a>
-    <a href="#" target="_blank" rel="noopener">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="logo-footer">
-    </a>
+    <a href="https://www.ahtma.com" target="_blank"><img src="images/ahtma.jpg" alt="Logo AHTMA formation hypnose" class="logo-footer"></a>
+    <a href="https://www.psychologies.com" target="_blank"><img src="images/psychologies.jpg" alt="Logo Psychologies" class="logo-footer"></a>
+    <a href="https://www.emdr-france.org" target="_blank"><img src="images/emdr.jpg" alt="Logo EMDR France" class="logo-footer"></a>
   </div>
+  <p style="color: white; margin-top: 15px;">© 2025 Vincent Malard - Hypnose & Thérapies. Tous droits réservés.</p>
 </footer>
 
 <script>
-// FAQ déroulante
-const faqQuestions = document.querySelectorAll('.faq-question');
-faqQuestions.forEach(q => {
-  q.addEventListener('click', () => {
-    const answer = q.nextElementSibling;
+const track = document.getElementById('testimonial-track');
+let index = 0;
+setInterval(() => {
+  index++;
+  if (index >= track.children.length) index = 0;
+  track.style.transform = `translateX(${-index * 320}px)`;
+  track.style.transition = 'transform 0.5s ease';
+}, 4000);
+
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+    const answer = question.nextElementSibling;
     answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
   });
 });
-
-// Témoignages défilement
-const track = document.getElementById('testimonial-track');
-const cards = Array.from(track.children);
-cards.forEach(card => track.appendChild(card.cloneNode(true)));
-let position = 0;
-const speed = 0.5;
-function animate() {
-  position -= speed;
-  if(position <= -track.scrollWidth/2) position = 0;
-  track.style.transform = `translateX(${position}px)`;
-  requestAnimationFrame(animate);
-}
-animate();
 </script>
+
+</body>
+</html>

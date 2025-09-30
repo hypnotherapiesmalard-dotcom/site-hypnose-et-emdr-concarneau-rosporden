@@ -1,271 +1,260 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hypnose & Thérapies</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <style>
-    /* Bandeau supérieur */
-    .topbar { background-color: #0a2a43; color: white; display: flex; justify-content: flex-end; align-items: center; padding: 8px 20px; font-size: 0.95rem; }
-    .topbar a { color: white; margin-left: 10px; text-decoration: none; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hypnose & Thérapies</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+/* Bandeau supérieur */
+.topbar { background-color: #0a2a43; color: white; display: flex; justify-content: flex-end; align-items: center; padding: 8px 20px; font-size: 0.95rem; }
+.topbar a { color: white; margin-left: 10px; text-decoration: none; }
 
-    /* Footer */
-    .footer-logos{ background-color: #062a47; padding: 15px 0; text-align: center; }
-    .footer-logos .logo-container{ display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
-    .footer-logos .logo-footer{ height: 32px; width: auto; display: inline-block; transition: transform 0.2s ease; }
-    .footer-logos .logo-footer:hover{ transform: scale(1.1); }
+/* Footer */
+.footer-logos{ background-color: #062a47; padding: 15px 0; text-align: center; }
+.footer-logos .logo-container{ display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+.footer-logos .logo-footer{ height: 32px; width: auto; display: inline-block; transition: transform 0.2s ease; }
+.footer-logos .logo-footer:hover{ transform: scale(1.1); }
 
-    /* Styles généraux */
-    body { font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; color: #333; background: linear-gradient(135deg, #f0f8ff, #e6f7f1, #fffaf0); }
-    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 15px 10px; background-color: #0a2a43; }
-    nav a { color: white; text-decoration: none; font-weight: bold; white-space: nowrap; }
+/* Styles généraux */
+body { font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; color: #333; background: linear-gradient(135deg, #f0f8ff, #e6f7f1, #fffaf0); }
+nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 15px 10px; background-color: #0a2a43; }
+nav a { color: white; text-decoration: none; font-weight: bold; white-space: nowrap; }
 
-    /* Header */
-    header { background: url('images/ACCUEIL.jpg') center/cover no-repeat; color: #0a2a43; text-align: center; padding: 100px 20px 60px; }
-    header h1 { font-size: 3rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; margin-bottom: 20px; }
-    .cta-button { display: inline-block; padding: 12px 25px; background-color: #0a2a43; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s ease; }
-    .cta-button:hover { background-color: #062a47; }
+/* Header */
+header { background: url('images/ACCUEIL.jpg') center/cover no-repeat; color: #0a2a43; text-align: center; padding: 100px 20px 60px; }
+header h1 { font-size: 3rem; margin-bottom: 10px; }
+header p { font-size: 1.2rem; margin-bottom: 20px; }
+.cta-button { display: inline-block; padding: 12px 25px; background-color: #0a2a43; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s ease; }
+.cta-button:hover { background-color: #062a47; }
 
-    /* Sections */
-    section { padding: 60px 20px; }
-    h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+/* Sections */
+section { padding: 60px 20px; }
+h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
-    /* Services et Conseils */
-    .services {
-      display: flex;
-      flex-wrap: wrap; /* autorise le passage sur plusieurs lignes si nécessaire */
-      justify-content: space-between;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .service-card {
-      background-color: #f8f8f8;
-      padding: 20px;
-      border-radius: 20px;
-      width: 23%;
-      min-width: 220px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-sizing: border-box;
-    }
-    .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+/* Services et Conseils */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.service-card {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 20px;
+  width: 23%;
+  min-width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+.service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 
-    /* Responsive pour mobile */
-    @media (max-width: 768px) { .service-card { width: 48%; } }
-    @media (max-width: 480px) { .service-card { width: 100%; } }
+/* Responsive */
+@media (max-width: 768px) { .service-card { width: 48%; } }
+@media (max-width: 480px) { .service-card { width: 100%; } }
 
-    /* Parcours */
-    #parcours img { width: 300px; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 20px; }
-    #parcours div { max-width: 800px; margin: 0 auto; text-align: center; }
+/* Parcours */
+#parcours img { width: 300px; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 20px; }
+#parcours div { max-width: 800px; margin: 0 auto; text-align: center; }
 
-    /* Témoignages */
-    .testimonials-container { overflow: hidden; position: relative; width: 100%; }
-    .testimonials-track { display: flex; gap: 20px; }
-    .testimonial { min-width: 300px; max-width: 300px; background-color: #f0f4f8; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); flex-shrink: 0; text-align: center; transition: transform 0.3s ease; }
-    .testimonial:hover { transform: scale(1.05); }
+/* Témoignages */
+.testimonials-container { overflow: hidden; position: relative; width: 100%; }
+.testimonials-track { display: flex; gap: 20px; }
+.testimonial { min-width: 300px; max-width: 300px; background-color: #f0f4f8; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); flex-shrink: 0; text-align: center; transition: transform 0.3s ease; }
+.testimonial:hover { transform: scale(1.05); }
 
-    /* FAQ */
-    .faq-item { max-width: 800px; margin: 0 auto 10px; border-bottom: 1px solid #ccc; }
-    .faq-question { cursor: pointer; padding: 15px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
-    .faq-answer { display: none; padding: 0 15px 15px; }
+/* FAQ */
+.faq-item { max-width: 800px; margin: 0 auto 10px; border-bottom: 1px solid #ccc; }
+.faq-question { cursor: pointer; padding: 15px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+.faq-answer { display: none; padding: 0 15px 15px; }
 
-    /* Contact */
-    #contact { text-align: center; padding: 40px 20px; display: flex; flex-direction: column; gap: 20px; }
-    #contact form { display: flex; flex-direction: column; align-items: center; gap: 15px; }
-    #contact form input, #contact form textarea { width: 100%; max-width: 400px; padding: 10px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
+/* Contact */
+#contact { text-align: center; padding: 40px 20px; display: flex; flex-direction: column; gap: 20px; }
+#contact form { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+#contact form input, #contact form textarea { width: 100%; max-width: 400px; padding: 10px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
 
-    /* Localisation */
-    #localisation iframe { width:100%; height:300px; border:0; border-radius:15px; margin-bottom:20px; }
+/* Localisation */
+#localisation iframe { width:100%; height:300px; border:0; border-radius:15px; margin-bottom:20px; }
 
-    /* --- Styles pour la section des atouts --- */
-    .atouts-section {
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #e6f9f0, #d2f2e3, #f7fff9);
-    }
-    .atouts-section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2rem;
-      color: #0a2a43;
-    }
-    .atouts-cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .atout-card {
-      background-color: white;
-      padding: 25px 20px;
-      border-radius: 16px;
-      width: 19%;
-      min-width: 160px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-      box-sizing: border-box;
-    }
-    .atout-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    }
-    .atout-card i {
-      font-size: 2.2rem;
-      color: #0a2a43;
-      margin-bottom: 15px;
-    }
-    .atout-card h3 {
-      margin-bottom: 10px;
-      color: #0a2a43;
-      font-size: 1.2rem;
-    }
-    .atout-card p {
-      color: #555;
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
-    @media (max-width: 992px) {
-      .atout-card { width: 48%; }
-    }
-    @media (max-width: 600px) {
-      .atout-card { width: 100%; }
-    }
-    .atouts-cards {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .atout-card {
-      width: 100%;
-      max-width: 600px;
-      padding: 20px;
-      border-radius: 20px;
-      background-color: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      box-sizing: border-box;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .atout-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
+/* --- Atouts --- */
+.atouts-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e6f9f0, #d2f2e3, #f7fff9);
+}
+.atouts-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #0a2a43; }
+.atouts-cards { display: flex; flex-direction: column; align-items: center; gap: 30px; max-width: 700px; margin: 0 auto; }
+.atout-card { width: 100%; max-width: 600px; padding: 20px; border-radius: 20px; background-color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
+.atout-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+.atout-card i { font-size: 2.2rem; color: #0a2a43; margin-bottom: 15px; }
+.atout-card h3 { margin-bottom: 10px; color: #0a2a43; font-size: 1.2rem; }
+.atout-card p { color: #555; font-size: 0.95rem; line-height: 1.4; }
 
-    /* --- Bandeau disclaimer fixe en bas --- */
-    .disclaimer-banner.fixed{
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 14px 18px;
-      background: linear-gradient(90deg,#e9f9f0,#d7f1e6);
-      border-top: 4px solid #0a2a43;
-      box-shadow: 0 -6px 24px rgba(0,0,0,0.12);
-    }
-    .disclaimer-text{
-      max-width: 1100px;
-      text-align: center;
-      color: #06343a;
-      font-size: 0.95rem;
-      line-height: 1.4;
-      padding: 0 6px;
-    }
-    .disclaimer-close{
-      background: transparent;
-      border: none;
-      font-size: 18px;
-      cursor: pointer;
-      color: #0a2a43;
-      padding: 6px;
-      border-radius: 6px;
-    }
-    .disclaimer-close:focus{ outline: 3px solid rgba(10,42,67,0.15); }
-    @media (max-width:600px){
-      .disclaimer-text{ font-size:0.9rem; padding-left:8px; padding-right:8px; }
-      .disclaimer-close{ font-size:16px; }
-    }
-  </style>
+/* --- Bandeau disclaimer --- */
+.disclaimer-banner.fixed{ position:fixed;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:center;justify-content:center;gap:12px;padding:14px 18px;background:linear-gradient(90deg,#e9f9f0,#d7f1e6);border-top:4px solid #0a2a43;box-shadow:0 -6px 24px rgba(0,0,0,0.12);}
+.disclaimer-text{max-width:1100px;text-align:center;color:#06343a;font-size:0.95rem;line-height:1.4;padding:0 6px;}
+.disclaimer-close{background:transparent;border:none;font-size:18px;cursor:pointer;color:#0a2a43;padding:6px;border-radius:6px;}
+.disclaimer-close:focus{outline:3px solid rgba(10,42,67,0.15);}
+@media(max-width:600px){.disclaimer-text{font-size:0.9rem;padding-left:8px;padding-right:8px;}.disclaimer-close{font-size:16px;}}
+</style>
 </head>
 <body>
 
-  <!-- ICI : tout ton contenu (header, sections, parcours, témoignages, FAQ, contact, localisation, etc.) -->
+<div class="topbar">
+  📞 <a href="tel:0749772290">07 49 77 22 90</a> 
+  ⭐⭐⭐⭐⭐ <a href="https://www.google.com/search?q=Vincent+Malard+Hypnose&ludocid=TON_LUDOCID" target="_blank" rel="noopener">Avis Google</a>
+</div>
 
-  <footer class="footer-logos">
-    <div class="logo-container">
-      <img src="ACCUEIL.jpg" alt="Logo" class="logo-footer">
-      <a href="https://www.facebook.com/VincentMalardHypnose?locale=fr_FR" target="_blank" rel="noopener">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="logo-footer">
-      </a>
-      <a href="#" target="_blank" rel="noopener">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="logo-footer">
-      </a>
-    </div>
-  </footer>
+<nav>
+  <a href="#services">Services</a>
+  <a href="#parcours">Parcours</a>
+  <a href="#conseils">Conseils</a>
+  <a href="#temoignages">Témoignages</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+  <a href="#localisation">Localisation</a>
+</nav>
 
-  <!-- Bandeau disclaimer -->
-  <div id="disclaimer-banner" class="disclaimer-banner fixed" role="note" aria-label="A lire attentivement">
-    <div class="disclaimer-text">
-      A lire attentivement : il est important de se rappeler que je ne suis pas médecin, ni psychiatre, ni psychothérapeute. 
-      Toute question d’ordre médical est à poser à votre médecin.
-    </div>
-    <button id="disclaimer-close" class="disclaimer-close" aria-label="Fermer la bannière">✕</button>
+<header>
+  <div class="header-content">
+    <h1>Hypnose & Thérapies</h1>
+    <p>Hypnose thérapeutique, EMDR, développement personnel, confiance en soi, gestion du stress, des traumatismes, de l'anxiété, des phobies... à Concarneau et Rosporden.</p>
+    <p>Votre bien-être commence ici</p>
+    <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez une séance</a>
   </div>
+</header>
 
-  <script>
-    // FAQ déroulante
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(q => {
-      q.addEventListener('click', () => {
-        const answer = q.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-      });
+<section id="services">
+  <h2>Mes Services</h2>
+  <div class="services">
+    <div class="service-card"><i class="fas fa-brain"></i><h3>Hypnose Thérapeutique</h3><p>Gestion du stress, anxiété, phobies...</p></div>
+    <div class="service-card"><i class="fas fa-user-check"></i><h3>Développement Personnel</h3><p>Renforcer confiance, motivation et bien-être.</p></div>
+    <div class="service-card"><i class="fas fa-hand-holding-heart"></i><h3>Accompagnement Personnalisé</h3><p>Séances sur-mesure adaptées à vos besoins.</p></div>
+    <div class="service-card"><i class="fas fa-heart-pulse"></i><h3>EMDR-DSA</h3><p>Traiter traumatismes et stress post-traumatique.</p></div>
+  </div>
+</section>
+
+<section id="atouts" class="atouts-section">
+  <h2>Ce que je peux vous apporter</h2>
+  <div class="atouts-cards">
+    <div class="atout-card"><i class="fas fa-thumbs-up"></i><h3>Retrouver la confiance</h3><p>Des séances bienveillantes...</p></div>
+    <div class="atout-card"><i class="fas fa-balance-scale"></i><h3>Perdre du poids</h3><p>L'hypnose modifie vos comportements alimentaires.</p></div>
+    <div class="atout-card"><i class="fas fa-smoking-ban"></i><h3>Sevrage tabagique</h3><p>Deux séances pour dire adieu à la cigarette.</p></div>
+    <div class="atout-card"><i class="fas fa-brain"></i><h3>Réduire le stress</h3><p>L’EMDR aide à traiter les traumatismes.</p></div>
+    <div class="atout-card"><i class="fas fa-sync-alt"></i><h3>Évolution durable</h3><p>Objectif : bien-être durable rapidement.</p></div>
+  </div>
+</section>
+
+<section id="parcours">
+  <h2>Mon Parcours</h2>
+  <img src="https://via.placeholder.com/300" alt="Photo de moi">
+  <div><p>Je suis thérapeute certifié en hypnose éricksonienne et en EMDR-DSA...</p></div>
+</section>
+
+<section id="conseils">
+  <h2>Conseils pour votre bien-être</h2>
+  <div class="services">
+    <div class="service-card"><h3>Respiration consciente</h3><p>Réduit le stress et l'anxiété.</p></div>
+    <div class="service-card"><h3>Méditation quotidienne</h3><p>Améliore concentration et sérénité.</p></div>
+    <div class="service-card"><h3>Sommeil réparateur</h3><p>Un rythme régulier améliore le sommeil.</p></div>
+    <div class="service-card"><h3>Activité physique</h3><p>Bouger aide à libérer les tensions.</p></div>
+  </div>
+</section>
+
+<section id="temoignages">
+  <h2>Témoignages</h2>
+  <div class="testimonials-container"><div class="testimonials-track" id="testimonial-track">
+    <div class="testimonial"><p>« Vincent m'a été d'une grande aide... »</p></div>
+    <div class="testimonial"><p>« J'ai rencontré Vincent après plusieurs années... »</p></div>
+  </div></div>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <div class="faq-item"><div class="faq-question">Comment se déroule une séance ? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Chaque séance dure environ 1h...</div></div>
+  <div class="faq-item"><div class="faq-question">Puis-je avoir un suivi personnalisé ? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Oui, des suivis réguliers...</div></div>
+</section>
+
+<section id="contact">
+  <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez une séance</a>
+  <h2>Contactez-moi</h2>
+  <div><p>Par téléphone au 0749772290</p><p>Par mail : hypno.therapies.malard@gmail.com</p></div>
+  <form action="https://formspree.io/f/mandvbvl" method="POST">
+    <input type="text" name="name" placeholder="Nom" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" rows="5" placeholder="Message" required></textarea>
+    <button type="submit" class="cta-button">Envoyer</button>
+  </form>
+</section>
+
+<section id="localisation">
+  <h2>Où me trouver?</h2>
+  <h3>Rosporden</h3>
+  <iframe src="https://www.google.com/maps" allowfullscreen loading="lazy"></iframe>
+</section>
+
+<footer class="footer-logos">
+  <div class="logo-container">
+    <img src="ACCUEIL.jpg" alt="Logo" class="logo-footer">
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="logo-footer"></a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="logo-footer"></a>
+  </div>
+</footer>
+
+<!-- Bandeau disclaimer -->
+<div id="disclaimer-banner" class="disclaimer-banner fixed" role="note" aria-label="A lire attentivement">
+  <div class="disclaimer-text">
+    A lire attentivement : il est important de se rappeler que je ne suis pas médecin, ni psychiatre, ni psychothérapeute. 
+    Toute question d’ordre médical est à poser à votre médecin.
+  </div>
+  <button id="disclaimer-close" class="disclaimer-close" aria-label="Fermer la bannière">✕</button>
+</div>
+
+<script>
+// FAQ déroulante
+const faqQuestions = document.querySelectorAll('.faq-question');
+faqQuestions.forEach(q => {
+  q.addEventListener('click', () => {
+    const answer = q.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
+// Témoignages défilement
+const track = document.getElementById('testimonial-track');
+if(track){
+  const cards = Array.from(track.children);
+  cards.forEach(card => track.appendChild(card.cloneNode(true)));
+  let position = 0; const speed = 0.5;
+  function animate(){
+    position -= speed;
+    if(position <= -track.scrollWidth/2) position = 0;
+    track.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
+
+// Disclaimer fermable
+document.addEventListener('DOMContentLoaded', function(){
+  const banner = document.getElementById('disclaimer-banner');
+  const closeBtn = document.getElementById('disclaimer-close');
+  if(localStorage.getItem('disclaimerClosed') === '1'){
+    if(banner) banner.style.display = 'none';
+    return;
+  }
+  if(closeBtn){
+    closeBtn.addEventListener('click', function(){
+      if(banner) banner.style.display = 'none';
+      try{ localStorage.setItem('disclaimerClosed','1'); }catch(e){}
     });
-
-    // Témoignages défilement
-    const track = document.getElementById('testimonial-track');
-    if (track) {
-      const cards = Array.from(track.children);
-      cards.forEach(card => track.appendChild(card.cloneNode(true)));
-      let position = 0;
-      const speed = 0.5;
-      function animate() {
-        position -= speed;
-        if(position <= -track.scrollWidth/2) position = 0;
-        track.style.transform = `translateX(${position}px)`;
-        requestAnimationFrame(animate);
-      }
-      animate();
-    }
-
-    // Disclaimer fermable
-    document.addEventListener('DOMContentLoaded', function(){
-      const banner = document.getElementById('disclaimer-banner');
-      const closeBtn = document.getElementById('disclaimer-close');
-      if (localStorage.getItem('disclaimerClosed') === '1') {
-        if (banner) banner.style.display = 'none';
-        return;
-      }
-      if (closeBtn) {
-        closeBtn.addEventListener('click', function(){
-          if (banner) banner.style.display = 'none';
-          try { localStorage.setItem('disclaimerClosed','1'); } catch(e) {}
-        });
-      }
-    });
-  </script>
+  }
+});
+</script>
 </body>
 </html>

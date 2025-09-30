@@ -141,6 +141,31 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
     width: 100%;
   }
 }
+  .atouts-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* espace entre chaque cadre */
+  max-width: 700px; /* largeur max pour le conteneur */
+  margin: 0 auto; /* centre le conteneur */
+}
+
+.atout-card {
+  width: 100%;      /* prend toute la largeur du conteneur */
+  max-width: 600px; /* limite la largeur max */
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.atout-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
 
 </style>
 </head>

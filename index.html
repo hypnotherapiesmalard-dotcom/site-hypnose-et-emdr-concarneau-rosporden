@@ -81,6 +81,92 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
 /* Localisation */
 #localisation iframe { width:100%; height:300px; border:0; border-radius:15px; margin-bottom:20px; }
+
+  /* --- Styles pour la section des atouts --- */
+.atouts-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e6f9f0, #d2f2e3, #f7fff9);
+}
+.atouts-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #0a2a43;
+}
+.atouts-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.atout-card {
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: 16px;
+  width: 19%;
+  min-width: 160px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  box-sizing: border-box;
+}
+.atout-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+.atout-card i {
+  font-size: 2.2rem;
+  color: #0a2a43;
+  margin-bottom: 15px;
+}
+.atout-card h3 {
+  margin-bottom: 10px;
+  color: #0a2a43;
+  font-size: 1.2rem;
+}
+.atout-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+@media (max-width: 992px) {
+  .atout-card {
+    width: 48%;
+  }
+}
+@media (max-width: 600px) {
+  .atout-card {
+    width: 100%;
+  }
+}
+  .atouts-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* espace entre chaque cadre */
+  max-width: 700px; /* largeur max pour le conteneur */
+  margin: 0 auto; /* centre le conteneur */
+}
+
+.atout-card {
+  width: 100%;      /* prend toute la largeur du conteneur */
+  max-width: 600px; /* limite la largeur max */
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.atout-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
 </style>
 </head>
 <body>
@@ -134,6 +220,38 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
     </div>
   </div>
 </section>
+
+  <section id="atouts" class="atouts-section">
+  <h2>Ce que je peux vous apporter</h2>
+  <div class="atouts-cards">
+    <div class="atout-card">
+     <i class="fas fa-thumbs-up"></i>
+      <h3>Retrouver la confiance en soi avec l'hypnose</h3>
+      <p>Des séances d'hypnose dans un espace bienveillant, avec respect et confidentialité, vous permettront de reprendre le contrôle de vos pensées et de vos émotions, pour vous permettre de retouver sérenité et confiance en vous</p>
+    </div>
+    <div class="atout-card">
+   <i class="fas fa-balance-scale"></i>
+     <h3>Perdre du poids grâce à l'hypnose</h3>
+      <p>L'hypnose est une solution efficace pour changer votre comportement alimentaire. En quelques séances adaptées et personnalisées vous constaterez rapidement des changements dans vos habitudes et qui vous permettront d'atteindre vos objectifs.</p>
+    </div>
+    <div class="atout-card">
+     <i class="fas fa-smoking-ban"></i>
+      <h3>Sevrage tabagique grâce à l'hypnose</h3>
+      <p>En deux séances d'hypnose espacées d'une dizaine de jours, cette habitude deviendra quelque chose du passé et laissera de la place pour des choses plus en accord avec vos objectifs.</p>
+    </div>
+    <div class="atout-card">
+      <i class="fas fa-brain"></i>
+      <h3>Réduire le stress grâce à l'EMDR</h3>
+      <p>L'EMDR-DSA est un formidable outil qui aide à traiter les traumatismes et les troubles liés au stress post-traumatique. Elle consiste à accompagner le patient dans le retraitement de souvenirs douloureux en stimulant les deux hémisphères cérébraux grâce à des mouvements oculaires guidés ou d’autres stimulations bilatérales (sons, tapotements). Cette stimulation permet de débloquer et réorganiser les souvenirs traumatiques, réduisant ainsi leur impact émotionnel et facilitant un apaisement durable.</p>
+    </div>
+    <div class="atout-card">
+      <i class="fas fa-sync-alt"></i>
+      <h3>Évolution durable</h3>
+      <p>Bien sûr ces changements ne sont pas éphémères. Le but de ces thérapies brèves est d'apporter un bien être mesurable et durable le plus rapidement possible. </p>
+    </div>
+  </div>
+</section>
+
 
 <section id="parcours">
   <h2>Mon Parcours</h2>
@@ -254,6 +372,40 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
     </a>
   </div>
 </footer>
+<footer class="footer-logos">
+  ...
+</footer>
+
+<script>
+  ...
+</script>
+
+<!-- Bandeau fixe à coller ici -->
+<div class="fixed-footer">
+  © 2025 - Il est important de se rappeler que je ne suis pas médecin, ni psychiatre, ni psychothérapeute. Toute question d’ordre médical est à poser à votre médecin.
+</div>
+
+<style>
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0a2a43;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  z-index: 9999;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+}
+body {
+  padding-bottom: 60px; /* pour que le contenu ne soit pas caché par le bandeau */
+}
+</style>
+
+</body>
+</html>
 
 <script>
 // FAQ déroulante

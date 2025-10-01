@@ -36,7 +36,7 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 /* Services et Conseils */
 .services {
   display: flex;
-  flex-wrap: wrap; /* autorise le passage sur plusieurs lignes si nécessaire */
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
   max-width: 1200px;
@@ -55,7 +55,7 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 }
 .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 
-/* Responsive pour mobile */
+/* Responsive */
 @media (max-width: 768px) { .service-card { width: 48%; } }
 @media (max-width: 480px) { .service-card { width: 100%; } }
 
@@ -82,91 +82,25 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 /* Localisation */
 #localisation iframe { width:100%; height:300px; border:0; border-radius:15px; margin-bottom:20px; }
 
-  /* --- Styles pour la section des atouts --- */
+/* --- Atouts --- */
 .atouts-section {
   padding: 60px 20px;
   background: linear-gradient(135deg, #e6f9f0, #d2f2e3, #f7fff9);
 }
-.atouts-section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-  color: #0a2a43;
-}
-.atouts-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.atout-card {
-  background-color: white;
-  padding: 25px 20px;
-  border-radius: 16px;
-  width: 19%;
-  min-width: 160px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  box-sizing: border-box;
-}
-.atout-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-}
-.atout-card i {
-  font-size: 2.2rem;
-  color: #0a2a43;
-  margin-bottom: 15px;
-}
-.atout-card h3 {
-  margin-bottom: 10px;
-  color: #0a2a43;
-  font-size: 1.2rem;
-}
-.atout-card p {
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-@media (max-width: 992px) {
-  .atout-card {
-    width: 48%;
-  }
-}
-@media (max-width: 600px) {
-  .atout-card {
-    width: 100%;
-  }
-}
-  .atouts-cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px; /* espace entre chaque cadre */
-  max-width: 700px; /* largeur max pour le conteneur */
-  margin: 0 auto; /* centre le conteneur */
-}
+.atouts-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #0a2a43; }
+.atouts-cards { display: flex; flex-direction: column; align-items: center; gap: 30px; max-width: 700px; margin: 0 auto; }
+.atout-card { width: 100%; max-width: 600px; padding: 20px; border-radius: 20px; background-color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
+.atout-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+.atout-card i { font-size: 2.2rem; color: #0a2a43; margin-bottom: 15px; }
+.atout-card h3 { margin-bottom: 10px; color: #0a2a43; font-size: 1.2rem; }
+.atout-card p { color: #555; font-size: 0.95rem; line-height: 1.4; }
 
-.atout-card {
-  width: 100%;      /* prend toute la largeur du conteneur */
-  max-width: 600px; /* limite la largeur max */
-  padding: 20px;
-  border-radius: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  box-sizing: border-box;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.atout-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-
+/* --- Bandeau disclaimer --- */
+.disclaimer-banner.fixed{ position:fixed;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:center;justify-content:center;gap:12px;padding:14px 18px;background:linear-gradient(90deg,#e9f9f0,#d7f1e6);border-top:4px solid #0a2a43;box-shadow:0 -6px 24px rgba(0,0,0,0.12);}
+.disclaimer-text{max-width:1100px;text-align:center;color:#06343a;font-size:0.95rem;line-height:1.4;padding:0 6px;}
+.disclaimer-close{background:transparent;border:none;font-size:18px;cursor:pointer;color:#0a2a43;padding:6px;border-radius:6px;}
+.disclaimer-close:focus{outline:3px solid rgba(10,42,67,0.15);}
+@media(max-width:600px){.disclaimer-text{font-size:0.9rem;padding-left:8px;padding-right:8px;}.disclaimer-close{font-size:16px;}}
 </style>
 </head>
 <body>
@@ -198,149 +132,58 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 <section id="services">
   <h2>Mes Services</h2>
   <div class="services">
-    <div class="service-card">
-      <i class="fas fa-brain"></i>
-      <h3>Hypnose Thérapeutique</h3>
-      <p>Gestion du stress, anxiété, phobies, blocages émotionnels, addictions, troubles du sommeil, gestion du poids.</p>
-    </div>
-    <div class="service-card">
-      <i class="fas fa-user-check"></i>
-      <h3>Développement Personnel</h3>
-      <p>Techniques pour renforcer confiance, motivation et bien-être.</p>
-    </div>
-    <div class="service-card">
-      <i class="fas fa-hand-holding-heart"></i>
-      <h3>Accompagnement Personnalisé</h3>
-      <p>Séances sur-mesure adaptées à vos besoins et objectifs.</p>
-    </div>
-    <div class="service-card">
-      <i class="fas fa-heart-pulse"></i>
-      <h3>EMDR-DSA</h3>
-      <p>Séances spécialisées pour traiter traumatismes et stress post-traumatique.</p>
-    </div>
+    <div class="service-card"><i class="fas fa-brain"></i><h3>Hypnose Thérapeutique</h3><p>Gestion du stress, anxiété, phobies...</p></div>
+    <div class="service-card"><i class="fas fa-user-check"></i><h3>Développement Personnel</h3><p>Renforcer confiance, motivation et bien-être.</p></div>
+    <div class="service-card"><i class="fas fa-hand-holding-heart"></i><h3>Accompagnement Personnalisé</h3><p>Séances sur-mesure adaptées à vos besoins.</p></div>
+    <div class="service-card"><i class="fas fa-heart-pulse"></i><h3>EMDR-DSA</h3><p>Traiter traumatismes et stress post-traumatique.</p></div>
   </div>
 </section>
 
-  <section id="atouts" class="atouts-section">
+<section id="atouts" class="atouts-section">
   <h2>Ce que je peux vous apporter</h2>
   <div class="atouts-cards">
-    <div class="atout-card">
-     <i class="fas fa-thumbs-up"></i>
-      <h3>Retrouver la confiance en soi avec l'hypnose</h3>
-      <p>Des séances d'hypnose dans un espace bienveillant, avec respect et confidentialité, vous permettront de reprendre le contrôle de vos pensées et de vos émotions, pour vous permettre de retouver sérenité et confiance en vous</p>
-    </div>
-    <div class="atout-card">
-   <i class="fas fa-balance-scale"></i>
-     <h3>Perdre du poids grâce à l'hypnose</h3>
-      <p>L'hypnose est une solution efficace pour changer votre comportement alimentaire. En quelques séances adaptées et personnalisées vous constaterez rapidement des changements dans vos habitudes et qui vous permettront d'atteindre vos objectifs.</p>
-    </div>
-    <div class="atout-card">
-     <i class="fas fa-smoking-ban"></i>
-      <h3>Sevrage tabagique grâce à l'hypnose</h3>
-      <p>En deux séances d'hypnose espacées d'une dizaine de jours, cette habitude deviendra quelque chose du passé et laissera de la place pour des choses plus en accord avec vos objectifs.</p>
-    </div>
-    <div class="atout-card">
-      <i class="fas fa-brain"></i>
-      <h3>Réduire le stress grâce à l'EMDR</h3>
-      <p>L'EMDR-DSA est un formidable outil qui aide à traiter les traumatismes et les troubles liés au stress post-traumatique. Elle consiste à accompagner le patient dans le retraitement de souvenirs douloureux en stimulant les deux hémisphères cérébraux grâce à des mouvements oculaires guidés ou d’autres stimulations bilatérales (sons, tapotements). Cette stimulation permet de débloquer et réorganiser les souvenirs traumatiques, réduisant ainsi leur impact émotionnel et facilitant un apaisement durable.</p>
-    </div>
-    <div class="atout-card">
-      <i class="fas fa-sync-alt"></i>
-      <h3>Évolution durable</h3>
-      <p>Bien sûr ces changements ne sont pas éphémères. Le but de ces thérapies brèves est d'apporter un bien être mesurable et durable le plus rapidement possible. </p>
-    </div>
+    <div class="atout-card"><i class="fas fa-thumbs-up"></i><h3>Retrouver la confiance</h3><p>Des séances bienveillantes...</p></div>
+    <div class="atout-card"><i class="fas fa-balance-scale"></i><h3>Perdre du poids</h3><p>L'hypnose modifie vos comportements alimentaires.</p></div>
+    <div class="atout-card"><i class="fas fa-smoking-ban"></i><h3>Sevrage tabagique</h3><p>Deux séances pour dire adieu à la cigarette.</p></div>
+    <div class="atout-card"><i class="fas fa-brain"></i><h3>Réduire le stress</h3><p>L’EMDR aide à traiter les traumatismes.</p></div>
+    <div class="atout-card"><i class="fas fa-sync-alt"></i><h3>Évolution durable</h3><p>Objectif : bien-être durable rapidement.</p></div>
   </div>
 </section>
-
 
 <section id="parcours">
   <h2>Mon Parcours</h2>
-  <img src="httpslh3.googleusercontent.compAF1QipMlsskJ_oddrTPGuRjE6kA9yZmy1NYtPJdmu4YD=w141-h141-n-k-no-nu.jpg" alt="Photo de moi">
-  <div>
-    <p>Je suis thérapeute certifié en hypnose éricksonienne et en EMDR-DSA. Elève de l'AHTMA à Vannes en 2019, j'ai suivi les différentes formations avec passion pour, depuis 2021 et jusqu'à aujourd'hui, être pleinement investi dans l’accompagnement de mes patients vers un mieux-être durable et personnalisé. Grâce aux séances d'hypnose ou d'EMDR, nous travaillerons ensemble pour votre développement personnel, sur la gestion du stress, pour diminuer l'anxiété, développer la confiance en soi, soulager les troubles liés au stress post traumatique, sur les problèmes de sommeil ou sur les addictions.  Vous pouvez prendre RDV à Concarneau ou Rosporden, ou simplement me contacter pour avoir des renseignements sur ma pratique.</p>
-  </div>
+  <img src="https://via.placeholder.com/300" alt="Photo de moi">
+  <div><p>Je suis thérapeute certifié en hypnose éricksonienne et en EMDR-DSA...</p></div>
 </section>
 
 <section id="conseils">
   <h2>Conseils pour votre bien-être</h2>
   <div class="services">
-    <div class="service-card">
-      <h3>Respiration consciente</h3>
-      <p>Pratiquez la respiration profonde pour réduire le stress et l'anxiété.</p>
-    </div>
-    <div class="service-card">
-      <h3>Méditation quotidienne</h3>
-      <p>Quelques minutes par jour suffisent pour améliorer votre concentration et sérénité.</p>
-    </div>
-    <div class="service-card">
-      <h3>Sommeil réparateur</h3>
-      <p>Respectez un rythme régulier pour un sommeil de qualité et un mieux-être général.</p>
-    </div>
-    <div class="service-card">
-      <h3>Activité physique</h3>
-      <p>Bouger régulièrement aide à libérer les tensions et favorise un esprit clair.</p>
-    </div>
+    <div class="service-card"><h3>Respiration consciente</h3><p>Réduit le stress et l'anxiété.</p></div>
+    <div class="service-card"><h3>Méditation quotidienne</h3><p>Améliore concentration et sérénité.</p></div>
+    <div class="service-card"><h3>Sommeil réparateur</h3><p>Un rythme régulier améliore le sommeil.</p></div>
+    <div class="service-card"><h3>Activité physique</h3><p>Bouger aide à libérer les tensions.</p></div>
   </div>
 </section>
 
 <section id="temoignages">
   <h2>Témoignages</h2>
-  <div class="testimonials-container">
-    <div class="testimonials-track" id="testimonial-track">
-      <div class="testimonial">
-        <p>« Vincent m'a été d'une grande aide pour vaincre une angoisse. Il a été à l'écoute, bienveillant, empathique. J'ai réussi grâce à ses pratiques comme l'EMDR à gagner certaines batailles ! Je recommande vivement pour un moment de sérénité et un réel changement dans sa vie ! Merci encore Vincent et peut-être à très vite ! »</p>
-      </div>
-      <div class="testimonial">
-        <p>« J'ai rencontré Vincent après plusieurs années d'anxiété et diverses thérapies non-concluantes. Il a très rapidement cerné le problème et par l'EMDR puis l'hypnose a fait taire l'anxiété l'attente. À voir comment cela évolue dans les prochains mois, mais j'ai repris confiance et je suis serein. Un thérapeute rare : bienveillant, disponible, efficace et profondément humain. MERCI VINCENT. »</p>
-      </div>
-      <div class="testimonial">
-        <p>« Au top, véritablement j'ai l'impression de renaître, je me sens libérée de tous les poids qui pouvaient m'empêcher d'avancer. Aujourd'hui est une nouvelle vie et une autre page qui s'écrit. Vous pouvez lui donner toute votre confiance, il vous aidera et je vous invite à y aller. Merci Vincent pour votre accompagnement. Merci beaucoup de m'avoir libéré de tous mes maux.. »</p>
-      </div>
-      <div class="testimonial">
-        <p>« Séance pour arrêt du tabac. Très bon résultat j'ai arrêté de fumer en une seule séance. Très bon accueil et échange merci pour votre aide. Je recommande »</p>
-      </div>
-      <div class="testimonial">
-        <p>« Juste génial, Après plusieurs séances dûes à un accident de la route. Je me sens plus confiante et moins angoissée à remettre les pieds dans une voiture. Reprise des heures de conduite, plus sure de moi. Grande diminution des douleurs causées par l'accident . Je recommande vivement pour retrouver un équilibre, et se sentir plus léger.. »</p>
-      </div>
-      <div class="testimonial">
-        <p>« Vincent m'a aidé à stopper l'envie de fumer. En seulement 2 séances, la nicotine à fui mon cerveau. Je m'en porte très bien et mon porte monnaie aussi :)»</p>
-      </div>
-      <div class="testimonial">
-        <p>« Découverte de l'hypnothérapie avec Vincent. Ses séances d'Edmr et hypnose ont permis de faire disparaitre rapidement un récent état de stress et d'angoisse. Vincent est à l'écoute et est très efficace pour cibler et traiter les causes des problèmes. »</p>
-      </div>
-    </div>
-  </div>
+  <div class="testimonials-container"><div class="testimonials-track" id="testimonial-track">
+    <div class="testimonial"><p>« Vincent m'a été d'une grande aide... »</p></div>
+    <div class="testimonial"><p>« J'ai rencontré Vincent après plusieurs années... »</p></div>
+  </div></div>
 </section>
 
 <section id="faq">
   <h2>FAQ</h2>
-  <div class="faq-item">
-      <div class="faq-question">Comment se déroule une séance ? <i class="fas fa-chevron-down"></i></div>
-      <div class="faq-answer">Chaque séance dure environ 1h et se déroule en toute confidentialité, adaptée à vos besoins.</div>
-  </div>
-  <div class="faq-item">
-      <div class="faq-question">Puis-je avoir un suivi personnalisé ? <i class="fas fa-chevron-down"></i></div>
-      <div class="faq-answer">Oui, des suivis réguliers sont proposés selon vos objectifs et besoins spécifiques.</div>
-  </div>
-  <div class="faq-item">
-      <div class="faq-question">Combien coûte une séance ? Et combien de séances sont nécessaires ?<i class="fas fa-chevron-down"></i></div>
-      <div class="faq-answer">Une séance d'hypnose ou d'Emdr coûte 55 Euros et peut être remboursée par la mutuelle. Les thérapies brèves vous font aller mieux en quelques séances, espacées de 2 à 3 semaines.</div>
-  </div>
-  <div class="faq-item">
-      <div class="faq-question">Tout le monde est il réceptif à l'hypnose ?<i class="fas fa-chevron-down"></i></div>
-      <div class="faq-answer">L’hypnose est un état naturel, que vous expérimentez déjà chaque jour sans le savoir, par exemple lorsque vous êtes plongé dans un film ou absorbé dans vos pensées. J'amplifie cet état pour ensuite travailler avec votre inconscient sur vos objectifs.</div>
-  </div>
+  <div class="faq-item"><div class="faq-question">Comment se déroule une séance ? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Chaque séance dure environ 1h...</div></div>
+  <div class="faq-item"><div class="faq-question">Puis-je avoir un suivi personnalisé ? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Oui, des suivis réguliers...</div></div>
 </section>
 
 <section id="contact">
   <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez une séance</a>
   <h2>Contactez-moi</h2>
-  <div>
-    <p>Par téléphone au 0749772290</p>
-    <p>Par mail : hypno.therapies.malard@gmail.com</p>
-    <p>Adresse: 8 rue de Névars, 29140 Rosporden; ou Anahata, Centre de santé intégrative, 5 bis rue des écoles 29900 Concarneau</p>
-  </div>
-  <a href="mailto:hypno.therapies.malard@gmail.com" class="cta-button">Réservez votre séance</a>
+  <div><p>Par téléphone au 0749772290</p><p>Par mail : hypno.therapies.malard@gmail.com</p></div>
   <form action="https://formspree.io/f/mandvbvl" method="POST">
     <input type="text" name="name" placeholder="Nom" required>
     <input type="email" name="email" placeholder="Email" required>
@@ -351,27 +194,26 @@ h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
 <section id="localisation">
   <h2>Où me trouver?</h2>
-
-  <!-- Rosporden -->
   <h3>Rosporden</h3>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d85491.84949146704!2d-3.8980258460211004!3d47.96306613208147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x4810de3b8d2dde41%3A0x4472e4ed2b50e8ef!2s8%20Rue%20de%20N%C3%A9vars%2C%2029140%20Rosporden!3m2!1d47.963095599999995!2d-3.8156253999999996!5e0!3m2!1sfr!2sfr!4v1757845331625!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-  <!-- Concarneau -->
-  <h3>Concarneau</h3>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d85641.5620614577!2d-4.001917751415456!3d47.87254162255919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x4810db21a648e87f%3A0xc7ad183a75ea4f!2s5%20bis%20Rue%20des%20%C3%89coles%2C%2029900%20Concarneau!3m2!1d47.872571099999995!2d-3.9195173!5e0!3m2!1sfr!2sfr!4v1757844992839!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://www.google.com/maps" allowfullscreen loading="lazy"></iframe>
 </section>
 
 <footer class="footer-logos">
   <div class="logo-container">
     <img src="ACCUEIL.jpg" alt="Logo" class="logo-footer">
-    <a href="https://www.facebook.com/VincentMalardHypnose?locale=fr_FR" target="_blank" rel="noopener">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="logo-footer">
-    </a>
-    <a href="#" target="_blank" rel="noopener">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="logo-footer">
-    </a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="logo-footer"></a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="logo-footer"></a>
   </div>
 </footer>
+
+<!-- Bandeau disclaimer -->
+<div id="disclaimer-banner" class="disclaimer-banner fixed" role="note" aria-label="A lire attentivement">
+  <div class="disclaimer-text">
+    A lire attentivement : il est important de se rappeler que je ne suis pas médecin, ni psychiatre, ni psychothérapeute. 
+    Toute question d’ordre médical est à poser à votre médecin.
+  </div>
+  <button id="disclaimer-close" class="disclaimer-close" aria-label="Fermer la bannière">✕</button>
+</div>
 
 <script>
 // FAQ déroulante
@@ -385,15 +227,34 @@ faqQuestions.forEach(q => {
 
 // Témoignages défilement
 const track = document.getElementById('testimonial-track');
-const cards = Array.from(track.children);
-cards.forEach(card => track.appendChild(card.cloneNode(true)));
-let position = 0;
-const speed = 0.5;
-function animate() {
-  position -= speed;
-  if(position <= -track.scrollWidth/2) position = 0;
-  track.style.transform = `translateX(${position}px)`;
-  requestAnimationFrame(animate);
+if(track){
+  const cards = Array.from(track.children);
+  cards.forEach(card => track.appendChild(card.cloneNode(true)));
+  let position = 0; const speed = 0.5;
+  function animate(){
+    position -= speed;
+    if(position <= -track.scrollWidth/2) position = 0;
+    track.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(animate);
+  }
+  animate();
 }
-animate();
+
+// Disclaimer fermable
+document.addEventListener('DOMContentLoaded', function(){
+  const banner = document.getElementById('disclaimer-banner');
+  const closeBtn = document.getElementById('disclaimer-close');
+  if(localStorage.getItem('disclaimerClosed') === '1'){
+    if(banner) banner.style.display = 'none';
+    return;
+  }
+  if(closeBtn){
+    closeBtn.addEventListener('click', function(){
+      if(banner) banner.style.display = 'none';
+      try{ localStorage.setItem('disclaimerClosed','1'); }catch(e){}
+    });
+  }
+});
 </script>
+</body>
+</html>
